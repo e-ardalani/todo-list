@@ -1,5 +1,5 @@
 {
-  "name": "sadad",
+  "name": "to-do-list",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -15,6 +15,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.2.8",
+    "@angular/cdk": "^14.2.6",
     "@angular/common": "^14.2.8",
     "@angular/compiler": "^14.2.8",
     "@angular/core": "^14.2.8",
@@ -25,7 +26,10 @@
     "@angular/platform-browser": "^14.2.8",
     "@angular/platform-browser-dynamic": "^14.2.8",
     "@angular/router": "^14.2.8",
+    "@types/uuid": "^8.3.4",
     "firebase": "^9.13.0",
+    "font-awesome": "^4.7.0",
+    "ngx-toastr": "^15.2.1",
     "rxjs": "~6.5.4",
     "tailwindcss": "^3.2.1",
     "tslib": "^2.0.0",
