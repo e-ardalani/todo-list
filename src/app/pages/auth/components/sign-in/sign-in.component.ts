@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthService} from '../../services/auth.service';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private router: Router,
+              public authService: AuthService,
+              private formBuilder: FormBuilder) {
+  }
 
   ngOnInit(): void {
+
+  }
+
+
+  signIn() {
+
+  }
+
+  signUp(){
+    this.router.navigate(['auth/sign-up']);
   }
 
 }
