@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 html,
 body {
@@ -38,7 +39,7 @@ body.dark-theme {
 
 }
 
-body, section {
+body, section, mat-menu {
   background: var(--bkg-color) !important;
 }
 
@@ -46,6 +47,6 @@ h1, p, span, label {
   color: var(--text-color) !important;
 }
 
-nav{
+nav {
   background-color: var(--primary-color) !important;
 }

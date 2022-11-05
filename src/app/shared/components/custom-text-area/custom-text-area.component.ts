@@ -13,20 +13,20 @@ import {
 import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-custom-input',
-  templateUrl: './custom-input.component.html',
-  styleUrls: ['./custom-input.component.scss'],
+  selector: 'app-custom-text-area',
+  templateUrl: './custom-text-area.component.html',
+  styleUrls: ['./custom-text-area.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => CustomInputComponent),
+      useExisting: forwardRef(() => CustomTextAreaComponent),
       multi: true
     }
   ]
 })
-export class CustomInputComponent implements OnInit, OnDestroy, AfterViewInit, AfterViewChecked, ControlValueAccessor {
+export class CustomTextAreaComponent implements OnInit, OnDestroy, AfterViewInit, AfterViewChecked, ControlValueAccessor {
   @Input() formControl: FormControl = new FormControl();
-  @Input() fontSizePx = '12';
+  @Input() fontSizePx = '14';
   @Input() name = '';
   @Input() label = '';
   @Input() appearance = 'outline';
@@ -73,6 +73,7 @@ export class CustomInputComponent implements OnInit, OnDestroy, AfterViewInit, A
   }
 
   getErrorMessages(errors) {
+
     return this.errorMessages[Object.keys(errors)[0]];
   }
 
@@ -94,16 +95,11 @@ export class CustomInputComponent implements OnInit, OnDestroy, AfterViewInit, A
 
   ngAfterViewChecked(): void {
 
-    let element = document.querySelector('.' + this.name + ' .mat-form-field-appearance-outline.ng-invalid.ng-touched .mat-form-field-outline-thick');
-    element && this._renderer.setStyle(element, 'opacity', 1);
-    element && this._renderer.setStyle(element, 'color', this.borderDefaultColor, RendererStyleFlags2.Important);
+    let element;
 
     element = document.querySelector('.' + this.name + ' .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick');
     element && this._renderer.setStyle(element, 'color', this.borderSelectColor);
 
-    element = document.querySelector('.' + this.name + ' .mat-form-field-appearance-outline.ng-valid.ng-touched .mat-form-field-outline-thick');
-    element && this._renderer.setStyle(element, 'opacity', 1);
-    element && this._renderer.setStyle(element, 'color', this.borderDefaultColor, RendererStyleFlags2.Important);
 
     if (this.isDisabled) {
 
@@ -127,4 +123,3 @@ export class CustomInputComponent implements OnInit, OnDestroy, AfterViewInit, A
   }
 
 }
-

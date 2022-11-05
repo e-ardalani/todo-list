@@ -7,14 +7,12 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isDarkTheme = false;
 
 
   // constructor(private taskService: TaskService) {
   // }
 
   ngOnInit(): void {
-    this.isDarkTheme = localStorage.getItem('theme') === 'Dark' ? true : false;
   }
 
   // search(term: string) {
@@ -22,8 +20,6 @@ export class HeaderComponent implements OnInit {
   // }
 
 
-  toggleDarkTheme(): void {
-    document.body.classList.toggle('dark-theme');
-  }
+
 
 }

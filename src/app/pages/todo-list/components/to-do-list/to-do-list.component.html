@@ -1,0 +1,11 @@
+<mat-card class="mb-5 add-task-card" (click)="openDialogCreateTask()">
+  <p class="font-bold">Add a task</p>
+</mat-card>
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+  <div *ngFor="let task of tasks" cdkDrag>
+    <app-to-do-item [task]="task" (done)="onDone(task)" (bookMark)="onBookMark(task)"
+                    (remove)="onRemove(task)"></app-to-do-item>
+  </div>
+</div>
+
+

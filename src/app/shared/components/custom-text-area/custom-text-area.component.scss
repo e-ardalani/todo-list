@@ -1,19 +1,22 @@
 ::ng-deep .mat-form-field-appearance-outline {
   &.mat-focused {
+
     .mat-form-field-label {
       transform: translateY(-1.29375em) scale(0.75) !important;
       top: 1.70375em;
     }
   }
+
 }
 
 ::ng-deep .mat-form-field-flex {
+
+
   .mat-form-field-infix {
     padding: 0.4em 0 .7em 0;
 
     input {
       margin-right: 5px;
-      height: 100%;
 
       &::placeholder {
         color: currentColor;
@@ -21,7 +24,6 @@
     }
 
     .mat-form-field-label {
-      // font-size: 15px;
       font-size: inherit;
       top: 1.40375em;
       transform: translateY(-1.29375em) scale(0.75) !important;
@@ -29,7 +31,6 @@
       span {
         margin-left: 3px;
         color: #f44336;
-        font-size: 12px;
       }
     }
   }
@@ -45,6 +46,8 @@
   padding-bottom: 0;
 }
 
-::ng-deep mat-label {
-  font-size: 12px !important;
+textarea {
+  width: 100%;
+  height: 120px;
+  resize: none !important;
 }

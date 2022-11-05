@@ -1,0 +1,18 @@
+<div [matMenuTriggerFor]="menu">
+  <img src="./assets/images/settings.svg" class="mr-3 p-2 h-6 sm:h-9" alt="setting"/>
+</div>
+<mat-menu #menu="matMenu" class="bkg-color">
+<!--  <div mat-menu-item class="header-setting">-->
+<!--    <p>Settings</p>-->
+<!--    <p>x</p>-->
+<!--  </div>-->
+  <button mat-menu-item>EN / FA</button>
+  <!--  <button mat-menu-item (click)="toggleDarkTheme()">Dark Mode /Light Mode</button>-->
+  <div class="change-theme">
+    <p>Turn On night mode</p>
+    <mat-slide-toggle (change)="onToggle($event)" (click)="$event.stopPropagation();"
+                      [checked]="isDarkTheme" [color]="'primary'">
+      {{(isDarkTheme) ? 'On' : 'Off'}}
+    </mat-slide-toggle>
+  </div>
+</mat-menu>

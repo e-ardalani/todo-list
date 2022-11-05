@@ -1,4 +1,4 @@
-// import {Task} from '../../to-do-list/models/task-model';
+import {Task} from '../../todo-list/models/task-model';
 
 export interface User {
   uid: string;
@@ -7,6 +7,6 @@ export interface User {
   firstName?: string;
   lastName?: string;
   emailVerified: boolean;
-  // tasks?: Task[];
+  tasks?: Task[];
 }
 

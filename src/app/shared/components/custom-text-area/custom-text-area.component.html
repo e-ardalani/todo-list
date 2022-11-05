@@ -1,0 +1,13 @@
+<div [class]="name">
+  <div [ngStyle]="{'font-size': fontSizePx+'px'}">
+    <mat-form-field style="width: 100%;height: 130px" [appearance]="appearance">
+      <mat-label *ngIf="withLabel" [ngStyle]="{'color': labelColor}">{{label}}</mat-label>
+      <textarea matInput type="text" [placeholder]="placeholder" [value]="matInputValue"
+                [formControl]="formControl" [required]="required"
+                (change)="onMatInputChange($event.target.value)" (click)="onInputClicked($event)"
+                [disabled]="isDisabled">
+            </textarea>
+      <mat-error *ngIf="formControl?.errors">{{getErrorMessages(formControl?.errors)}}</mat-error>
+    </mat-form-field>
+  </div>
+</div>

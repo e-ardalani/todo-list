@@ -12,12 +12,17 @@
       </div>
       <form class="space-y-6" [formGroup]="formGroup">
         <div class="">
-          <app-custom-input i18n-placeholder [placeholder]="'Email'" [formControl]="formGroup.controls['email']"
-          ></app-custom-input>
+          <input i18n-placeholder formControlName="email"
+                 class=" w-full text-sm  px-4 py-3 bg-gray-200 focus:bg-gray-100 border  border-gray-200 rounded-lg focus:outline-none focus:border-purple-400"
+                 type="text" placeholder="Email">
         </div>
+<!--          <app-custom-input i18n-placeholder [placeholder]="'Email'" [formControl]="formGroup.controls['email']"-->
+<!--          ></app-custom-input>-->
+
         <div class="relative">
-          <app-custom-input i18n-placeholder [placeholder]="'Email'" [type]="'password'"
-                            [formControl]="formGroup.controls['password']"></app-custom-input>
+          <input i18n-placeholder formControlName="password"
+                 class=" w-full text-sm  px-4 py-3 bg-gray-200 focus:bg-gray-100 border  border-gray-200 rounded-lg focus:outline-none focus:border-purple-400"
+                 type="password" placeholder="Email">
 
         </div>
         <div class="flex items-center justify-between">

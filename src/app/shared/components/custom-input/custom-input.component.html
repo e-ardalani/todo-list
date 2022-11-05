@@ -1,3 +1,10 @@
-<input i18n-placeholder
-       class=" w-full text-sm  px-4 py-3 bg-gray-200 focus:bg-gray-100 border  border-gray-200 rounded-lg focus:outline-none focus:border-purple-400"
-       type="{{type}}" [placeholder]="placeholder" [value]="matInputValue" [formControl]="formControl">
+<div [class]="name">
+  <div [ngStyle]="{'font-size': fontSizePx+'px'}">
+    <mat-form-field style="width: 100%" [appearance]="appearance">
+      <mat-label *ngIf="withLabel" [ngStyle]="{'color': labelColor, 'fontsize' : '12px'}">{{label}}</mat-label>
+      <input matInput type="text" [placeholder]="placeholder" [value]="matInputValue" [formControl]="formControl" [required]="required"
+             (change)="onMatInputChange($event.target.value)" (click)="onInputClicked($event)" [disabled]="isDisabled">
+      <mat-error *ngIf="formControl?.errors">{{getErrorMessages(formControl?.errors)}}</mat-error>
+    </mat-form-field>
+  </div>
+</div>
