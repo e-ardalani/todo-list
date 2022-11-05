@@ -18,6 +18,7 @@ export class TaskService {
   tasks: AngularFirestoreCollection<Task>;
   userId = this.authService.getUid();
   searchItem: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  taskItem$: Subject<Task> = new Subject<Task>();
 
 
   constructor(public afs: AngularFirestore,
@@ -91,5 +92,9 @@ export class TaskService {
         userRef.set({tasks}, {mergeFields: ['tasks']}).then(() => resolve()).catch(() => reject());
       });
     });
+  }
+
+  setTask(task) {
+    this.taskItem$.next(task);
   }
 }

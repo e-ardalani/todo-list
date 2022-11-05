@@ -1,5 +1,6 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {Task} from '../../models/task-model';
+import {TaskService} from '../../services/task.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class ToDoItemComponent {
   @Output() remove = new EventEmitter();
 
 
-  constructor() {
+  constructor(private taskService: TaskService) {
   }
 
   onDone() {
@@ -27,6 +28,10 @@ export class ToDoItemComponent {
 
   onBookMark() {
     this.bookMark.emit();
+  }
+
+  getTask(task: Task) {
+    this.taskService.setTask(task);
   }
 
 }

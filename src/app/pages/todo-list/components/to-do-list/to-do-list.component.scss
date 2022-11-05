@@ -6,7 +6,21 @@
 
 .add-task-card{
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
   //cursor: pointer;
+
+  svg{
+    path{
+      color: #78bafd !important;
+    }
+  }
+
+  .title{
+    color: #78bafd !important;
+    font-weight: 400;
+
+  }
 }
 
 

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-// import {TaskService} from '../../../to-do-list/services/task.service';
+import {TaskService} from '../../../pages/todo-list/services/task.service';
 
 @Component({
   selector: 'app-header',
@@ -9,15 +9,15 @@ import {Component, OnInit} from '@angular/core';
 export class HeaderComponent implements OnInit {
 
 
-  // constructor(private taskService: TaskService) {
-  // }
+  constructor(private taskService: TaskService) {
+  }
 
   ngOnInit(): void {
   }
 
-  // search(term: string) {
-  //   this.taskService.search(term);
-  // }
+  search(term: string) {
+    this.taskService.search(term);
+  }
 
 
 

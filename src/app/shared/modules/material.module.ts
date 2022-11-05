@@ -74,7 +74,8 @@ const modules = [CommonModule,
   MatPaginatorModule,
   MatSortModule,
   DragDropModule,
-  MatTableModule];
+  MatTableModule,
+];
 
 
 @NgModule({

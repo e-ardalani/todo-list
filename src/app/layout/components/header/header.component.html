@@ -2,11 +2,11 @@
   <nav class="primary-color  border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
     <div class="flex flex-wrap justify-between items-center mx-auto">
       <div class="flex items-center">
-<!--        <img src="./assets/images/grid-view.png" class="mr-3 h-6 sm:h-9" alt="Todo Logo"/>-->
+        <img src="./assets/images/grid-view.png" class="mr-3 h-6 sm:h-9" alt="Todo Logo"/>
         <span class="self-center text-xl font-semibold whitespace-nowrap text-white dark:text-white">To Do</span>
       </div>
       <div class="relative text-gray-600">
-        <input type="text" name="serch" placeholder="Search" #input
+        <input type="text" name="serch" placeholder="Search" #input (keyup)="search(input.value)"
                class="bg-white h-10 px-5 pr-10 rounded-md text-sm focus:outline-none">
         <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
           <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@
       </div>
       <div class="flex items-center lg:order-2">
         <app-setting></app-setting>
-        <!--        <app-profile></app-profile>-->
+        <app-profile></app-profile>
 
 
       </div>

@@ -1,0 +1,19 @@
+.task-container {
+  background-color: white;
+  width: 300px;
+  height: 100%;
+
+  .form {
+    padding: 10px;
+
+    .action{
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      button{
+        margin-right: 5px;
+      }
+    }
+
+  }
+}

@@ -4,11 +4,11 @@ import {HeaderComponent} from './components/header/header.component';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {LayoutRoutingModule} from './layout-routing.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-// import {CreateItemComponent} from '../to-do-list/components/create-item/create-item.component';
-// import {ToDoListModule} from '../to-do-list/to-do-list.module';
 import {SharedModule} from '../shared/shared.module';
-// import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileComponent } from './components/profile/profile.component';
 import { SettingComponent } from './components/setting/setting.component';
+import {CreateItemComponent} from '../pages/todo-list/components/create-item/create-item.component';
+import {ToDoListModule} from '../pages/todo-list/to-do-list.module';
 
 
 @NgModule({
@@ -16,16 +16,16 @@ import { SettingComponent } from './components/setting/setting.component';
     HeaderComponent,
     DashboardComponent,
     SidebarComponent,
-    // ProfileComponent,
+    ProfileComponent,
     SettingComponent
   ],
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    // ToDoListModule,
+    ToDoListModule,
     SharedModule
   ],
-  // entryComponents: [CreateItemComponent]
+  entryComponents: [CreateItemComponent]
 
 })
 export class LayoutModule {

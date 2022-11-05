@@ -1,62 +1,19 @@
-<!--<div class="task-item__container" cdkDropList (cdkDropListDropped)="drop($event)">-->
-<!--  <div *ngFor="let task of dataSours" cdkDrag>-->
-<!--    <mat-card>-->
-<!--      <div class="task-item__content">-->
-<!--        <mat-checkbox [checked]="task.isDone" class="task-title" id="isDone" (change)="done(task.id,$event)">-->
-<!--          <p>{{task?.title}}</p>-->
-<!--        </mat-checkbox>-->
-<!--        <p>{{task?.description}}</p>-->
-<!--        <button (click)="remove(task.id)">x</button>-->
-<!--   -->
-<!--      </div>-->
-<!--      <mat-checkbox [checked]="task.isBookmark" class="task-title" id="isBookmark"-->
-<!--                    (change)="bookMark(task.id,$event)"><p>bookMark</p>-->
-<!--      </mat-checkbox>-->
-
-<!--    </mat-card>-->
-<!--</div>-->
-
-
-<div class="task-item__container">
+<div class="task-item__container" (click)="getTask(task)">
   <mat-card>
     <div class="task-item__content">
-      <mat-checkbox [checked]="task.isDone" class="task-title" (change)="onDone()">
-        <p>{{task?.title}}</p>
-      </mat-checkbox>
-      <p>{{task?.description}}</p>
-      <button (click)="onRemove()">x</button>
+      <label class="checkbox-container" [ngClass]="task.isDone?'completed':'unCompleted'">{{task?.title}}
+        <input type="checkbox" [checked]="task.isDone" [value]="task.isDone" (change)="onDone()">
+        <span class="checkmark"></span>
+      </label>
+      <p class="task-description">{{task?.description}}</p>
+      <!--      <button (click)="onRemove()">x</button>-->
 
     </div>
-    <mat-checkbox [checked]="task.isBookmark" class="task-title" (change)="onBookMark()"><p>bookMark</p>
-    </mat-checkbox>
-
+    <div class="bookmark" (click)="onBookMark()">
+      <img
+        [src]="task.isBookmark?'./assets/images/bookmark.svg':'./assets/images/blue-star.png'">
+    </div>
   </mat-card>
 </div>
-
-
-<!--<div cdkDropList class="example-list mt-20" (cdkDropListDropped)="drop($event)">-->
-<!--  <div class="example-box" *ngFor="let movie of tasks, index as i" cdkDrag>-->
-<!--        <mat-card >-->
-<!--          <div class="task-item__content">-->
-
-<!--            <mat-checkbox class="task-title"><p>{{movie?.title}}</p></mat-checkbox>-->
-<!--            <p>{{movie?.description}}</p>-->
-<!--          </div>-->
-<!--        </mat-card>-->
-<!--&lt;!&ndash;    <div class="drag-index">{{movie.title}}</div>&ndash;&gt;-->
-<!--&lt;!&ndash;    <div class="w-10 drag-icon">&ndash;&gt;-->
-<!--&lt;!&ndash;      <i *ngIf="!movie.isDisable" class="material-icons disable">reorder</i>&ndash;&gt;-->
-<!--&lt;!&ndash;      <i  class="material-icons" cdkDragHandle>reorder</i>&ndash;&gt;-->
-<!--&lt;!&ndash;    </div>&ndash;&gt;-->
-<!--&lt;!&ndash;    <div class="w-100 drag-content">&ndash;&gt;-->
-<!--&lt;!&ndash;      <mat-checkbox (change)="movie.isDisable = !movie.isDisable">Click and drop only through icon</mat-checkbox>&ndash;&gt;-->
-<!--&lt;!&ndash;    </div>&ndash;&gt;-->
-<!--&lt;!&ndash;    <div class="w-10 delete-icon">&ndash;&gt;-->
-<!--&lt;!&ndash;      <button mat-icon-button>&ndash;&gt;-->
-<!--&lt;!&ndash;        <i class="material-icons" (click)="delete(i)">delete_outline</i>&ndash;&gt;-->
-<!--&lt;!&ndash;      </button>&ndash;&gt;-->
-<!--&lt;!&ndash;    </div>&ndash;&gt;-->
-<!--  </div>-->
-<!--</div>-->
 
 
