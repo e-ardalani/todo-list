@@ -8,6 +8,7 @@ import {
 } from '@angular/fire/compat/firestore';
 import {Router} from '@angular/router';
 import {ToastrService} from 'ngx-toastr';
+import {ApiService} from '../../../shared/services/api.service';
 
 
 @Injectable({
@@ -23,6 +24,7 @@ export class AuthService {
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
     public router: Router,
+    private apiService: ApiService,
     private toastr: ToastrService,
     public ngZone: NgZone // NgZone service to remove outside scope warning
   ) {
@@ -47,18 +49,21 @@ export class AuthService {
 
   // Sign in with email/password
   SignIn(email: string, password: string) {
+    this.apiService.start();
     return this.afAuth
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
         this.SetUserData(result.user);
         this.afAuth.authState.subscribe((user) => {
+          this.apiService.complete();
           if (user) {
             this.router.navigate(['dashboard']);
           }
         });
       })
       .catch((error) => {
-        // window.alert(error.message);
+        // console.log(error.errore.message);
+        this.apiService.complete();
         this.toastr.error(error.message);
 
       });
