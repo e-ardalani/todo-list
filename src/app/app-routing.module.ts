@@ -1,16 +1,21 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {UserGuard} from './core/guards/user.guard';
+import {AuthGuard} from './core/guards/auth.guard';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/auth/sign-in', pathMatch: 'full'},
+  {path: 'dashboard', canActivate: [AuthGuard], loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule)},
   {path: 'auth', canActivate: [UserGuard], loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)},
+  {path: '', redirectTo: '/auth/sign-in', pathMatch: 'full'},
+  {path: '**', redirectTo: 'dashboard'},
+
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes, {relativeLinkResolution: 'legacy'})],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

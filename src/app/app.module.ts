@@ -11,11 +11,13 @@ import {AngularFireStorageModule} from '@angular/fire/compat/storage';
 import {AngularFireDatabaseModule} from '@angular/fire/compat/database';
 import {environment} from '../environments/environment';
 import {ToastrModule} from 'ngx-toastr';
+import { DashboardComponent } from './layout/components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignInComponent
+    SignInComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

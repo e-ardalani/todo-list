@@ -16,7 +16,7 @@ export class UserGuard implements CanActivate {
   ): Observable<boolean> | Promise<boolean> | boolean {
     console.log(this.authService.isLoggedIn);
     if (this.authService.isLoggedIn === true) {
-      // this.router.navigate(['dashboard']);
+      this.router.navigate(['dashboard']);
     }
     return true;
   }
