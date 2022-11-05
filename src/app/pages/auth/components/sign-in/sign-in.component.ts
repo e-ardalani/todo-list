@@ -32,8 +32,15 @@ export class SignInComponent implements OnInit {
     this.router.navigate(['auth/sign-up']);
   }
 
-  onSubmit(form) {
+  singInByUserNameAndPassword(form) {
     this.authService.SignIn(form.email, form.password).finally();
+  }
+
+  singInByGoogleAuth() {
+    this.authService.GoogleAuth().then(() => {
+      console.log('gggg');
+      this.router.navigate(['dashboard']);
+    });
   }
 
 }

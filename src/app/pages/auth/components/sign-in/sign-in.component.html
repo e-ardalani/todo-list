@@ -10,7 +10,7 @@
         <p class="text-gray-400" i18n>Don'thave an account?
           <a (click)="signUp()" class="text-sm text-purple-700 hover:text-purple-700">Sign Up</a></p>
       </div>
-      <form class="space-y-6" [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
+      <form class="space-y-6" [formGroup]="formGroup">
         <div class="">
           <app-custom-input i18n-placeholder [placeholder]="'Email'" [formControl]="formGroup.controls['email']"
           ></app-custom-input>
@@ -28,7 +28,7 @@
           </div>
         </div>
         <div>
-          <button type="submit" i18n
+          <button type="submit" i18n (click)="singInByUserNameAndPassword(formGroup.value)"
                   class="w-full flex justify-center bg-purple-800  hover:bg-purple-700 text-gray-100 p-3  rounded-lg tracking-wide font-semibold  cursor-pointer transition ease-in duration-500">
             Sign in
           </button>
@@ -40,7 +40,7 @@
         </div>
         <div class="flex justify-center gap-5 w-full ">
 
-          <button type="submit" (click)="authService.GoogleAuth()"
+          <button type="submit" (click)="singInByGoogleAuth()"
                   class="w-full flex items-center justify-center mb-6 md:mb-0 border border-gray-300 hover:border-gray-900 hover:bg-gray-900 text-sm text-gray-500 p-3  rounded-lg tracking-wide font-medium  cursor-pointer transition ease-in duration-500">
             <svg class="w-4 mr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path fill="#EA4335"

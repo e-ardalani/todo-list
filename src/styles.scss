@@ -19,3 +19,33 @@ body {
 a {
   cursor: pointer;
 }
+
+
+body {
+  --text-color: #222;
+  --bkg-color: #fff;
+  --btn-txt-color: white;
+  --btn-bg-color: rgb(11, 88, 160);
+  --primary-color: #2564cf !important;
+}
+
+body.dark-theme {
+  --text-color: #eee;
+  --bkg-color: rgba(0, 0, 0, .87);
+  --btn-txt-color: rgb(46, 43, 43);
+  --btn-bg-color: rgb(20, 211, 195);
+  --primary-color: #1B1A19 !important;
+
+}
+
+body, section {
+  background: var(--bkg-color) !important;
+}
+
+h1, p, span, label {
+  color: var(--text-color) !important;
+}
+
+nav{
+  background-color: var(--primary-color) !important;
+}
