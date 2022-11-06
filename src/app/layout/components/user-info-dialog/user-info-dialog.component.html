@@ -1,5 +1,7 @@
 <div class="dialog-header">
   <mat-icon mat-dialog-close><img src="./assets/images/close.svg"></mat-icon>
+<!--  <h1>Profile</h1>-->
+<!--  <span> </span>-->
 </div>
 <div class="profile-container">
   <div class="dialog-content">
@@ -14,12 +16,12 @@
     <hr>
     <div class="dark-mode-container">
       <app-toggle-theme (darkMode)="getTheme($event)"></app-toggle-theme>
-      <span>{{isDarkMode ? 'Switch To Light Mode' : 'Switch To Dark Mode'}}</span>
+      <span i18n>{{isDarkMode ? 'Switch To Light Mode' : 'Switch To Dark Mode'}}</span>
     </div>
     <hr>
     <div class="lang-container">
       <app-toggle-language (selectLang)="getLang($event)"></app-toggle-language>
-      <span>{{(lang === 'Fa') ? 'Switch To En' : 'Switch To Fa'}}</span>
+      <span i18n>{{(lang === 'Fa') ? 'Switch To En' : 'Switch To Fa'}}</span>
     </div>
 
   </div>

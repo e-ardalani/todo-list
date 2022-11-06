@@ -8,11 +8,21 @@
 
     </div>
 
-    <label for="menu-toggle" class="pointer-cursor lg:hidden block">
+    <label class="pointer-cursor lg:hidden block">
       <img [src]="'./assets/images/user.png'" (click)="openDialogUser()"
            class="avatar h-6 sm:h-9 shadow-lg flex items-center rounded-full profile-photo" alt="photo"/>
     </label>
-    <input class="hidden" type="checkbox" id="menu-toggle"/>
+
+    <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+      <nav>
+        <div class="flex items-center lg:order-2 align-center">
+          <app-toggle-language></app-toggle-language>
+          <app-toggle-theme></app-toggle-theme>
+          <app-profile></app-profile>
+        </div>
+
+      </nav>
+    </div>
   </header>
 
 </div>
