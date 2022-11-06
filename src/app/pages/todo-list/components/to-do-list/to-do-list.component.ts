@@ -75,12 +75,14 @@ export class ToDoListComponent implements OnInit, OnDestroy {
   }
 
 
-  openDialogCreateTask() {
+  openDialogTask(task?: string) {
     const dialog = this.dialog.open(CreateItemComponent, {
-      disableClose: false,
-      width: '400px',
-      height: 'auto'
-    });
+        disableClose: false,
+        width: '400px',
+        height: 'auto',
+        data: {task}
+      })
+    ;
     dialog.afterClosed().subscribe((task) => {
     });
   }

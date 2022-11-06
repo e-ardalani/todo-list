@@ -15,7 +15,7 @@
           [src]="!task.isBookmark?'./assets/images/bookmark.svg':'./assets/images/blue-star.png'">
       </div>
       <div class="btn-action">
-        <button><img src="./assets/images/edit.svg"></button>
+        <button (click)="onEdit()"><img src="./assets/images/edit.svg"></button>
         <button (click)="onRemove()"><img src="./assets/images/trash.svg"></button>
       </div>
     </div>

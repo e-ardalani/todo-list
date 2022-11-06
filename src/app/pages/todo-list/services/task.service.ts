@@ -54,6 +54,23 @@ export class TaskService {
     });
   }
 
+  updateTask(taskId: string, title?: string, description?: string): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
+      this.getTasks().subscribe(tasks => {
+        const task = tasks.find(item => item.id === taskId);
+        if (task && title) {
+          task.title = title;
+        }
+
+        if (task && description) {
+          task.description = description;
+        }
+        const userRef = this.afs.doc(`users/${this.userId}`);
+        userRef.set({tasks}, {mergeFields: ['tasks']}).then(() => resolve()).catch(() => reject());
+      });
+    });
+  }
+
   getLiveTasks(): Observable<Task[]> {
     return this.afs.doc<User>(`users/${this.userId}`).snapshotChanges().pipe(map(item => item.payload.data().tasks ? item.payload.data().tasks : []));
   }
