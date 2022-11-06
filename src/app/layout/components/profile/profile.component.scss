@@ -1,7 +1,7 @@
 #menu {
   width: 320px !important;
   max-width: 100vw !important;
-
+  overflow-wrap: anywhere;
 }
 
 .profile-container {
@@ -22,6 +22,8 @@
   .user-info {
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
+    margin-left: 5px;
 
     .user-email {
       font-size: 14px !important;
@@ -38,6 +40,12 @@
 
   img {
     width: 30px;
+    filter: invert(73%) sepia(14%) saturate(0%) hue-rotate(210deg) brightness(93%) contrast(91%);
+  }
+
+  a{
+    display: inline-block;
+    margin-right: 5px;
   }
 }
 

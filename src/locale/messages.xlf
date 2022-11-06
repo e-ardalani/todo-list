@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="96db6e75978be5fb545ecbdaa1a11354499f05e9" datatype="html">
+        <source>Sign In </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d2360891877aa6569b20caf10e7fb06cf0c6f10b" datatype="html">
+        <source>Don&apos;thave an account? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a (click)=&quot;signUp()&quot; class=&quot;text-sm text-purple-700 hover:text-purple-700&quot;&gt;"/>Sign Up<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="244aae9346da82b0922506c2d2581373a15641cc" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="99356e4625f219a11aaf7377779aad8ffe2ee2c5" datatype="html">
+        <source> Forgot your password? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6ad17443c5d0be7954254eb2455fe0b32ee2ff05" datatype="html">
+        <source> Sign in </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="053e81597467a642e04109eebe934c84e6a1f467" datatype="html">
+        <source>or</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="829ee6ae59965f00eb75aa275b361130c5259daa" datatype="html">
+        <source>Are You Sure?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/confirm-bottom-sheet/confirm-bottom-sheet.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

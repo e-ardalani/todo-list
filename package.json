@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "build-prod": "ng build --configuration production",
     "start:fa": "ng serve --configuration=fa",
-    "i18n:extract": "ng extract-i18n --output-path src/local"
+    "i18n:extract": "ng extract-i18n --output-path src/locale"
   },
   "private": true,
   "dependencies": {

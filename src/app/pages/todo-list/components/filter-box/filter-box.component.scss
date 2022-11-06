@@ -1,7 +1,36 @@
-.filter-container{
-  background-color: var(--bkg-filter-color) !important;
-  display: flex;
-  justify-content: space-evenly;
-  z-index: 1000;
+@import "partial/breakpoints";
+
+
+.filter-container {
+  background-color: var(--bg-secondary) !important;
+  margin: 0 0 10px 0;
+
+
+
+  .task-count {
+    background-color: blue;
+    color: white !important;
+  }
 
 }
+
+mat-chip{
+  min-width: 100px !important;
+  display: flex;
+  justify-content: space-between;
+  @include media-breakpoint('lt-md') {
+    font-size: 12px;
+    min-width: 120px !important;
+
+  }
+  }
+
+@include media-breakpoint('lt-md') {
+  ::ng-deep .mat-chip-list-wrapper {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+}
+

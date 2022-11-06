@@ -1,3 +1,5 @@
+@import "partial/breakpoints";
+
 .dashboard-container {
   display: flex;
   flex-direction: column;
@@ -9,6 +11,10 @@
     height: 90%;
     padding: 0 150px;
     overflow: auto;
+    @include media-breakpoint('lt-md') {
+      padding: 10px;
+      align-items: center;
+      flex-direction: column;    }
 
   }
 }

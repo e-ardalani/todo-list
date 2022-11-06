@@ -1,3 +1,5 @@
+@import "partial/breakpoints";
+
 span {
   font-weight: 600 !important;
   font-size: 16px;
@@ -14,4 +16,16 @@ header {
   background-color: #e7dcdc;
   padding: 3px;
   margin-right: 10px;
+}
+
+
+@include media-breakpoint('lt-md') {
+  //span{
+  //  display: none;
+  //}
+}
+
+
+#menu-toggle:checked + #menu {
+  display: block;
 }

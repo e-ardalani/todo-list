@@ -119,6 +119,11 @@ export class AuthService {
   // Sign in with Google
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
+      this.afAuth.authState.subscribe((user) => {
+        if (user) {
+          this.router.navigate(['dashboard']);
+        }
+      });
     }).catch((error) => {
       this.toastr.error(error);
     });
@@ -129,9 +134,16 @@ export class AuthService {
     return this.afAuth
       .signInWithPopup(provider)
       .then((result) => {
-        this.router.navigate(['dashboard']);
 
-        this.SetUserData(result.user);
+        let firstName = '';
+        let lastName = '';
+        try {
+          firstName = result.user.displayName.split(' ')[0];
+          lastName = result.user.displayName.replace(firstName, '');
+        }catch (e) {
+          firstName = result.user.displayName;
+        }
+        this.SetUserData(result.user, firstName, lastName);
       })
       .catch((error) => {
         window.alert(error);
@@ -170,6 +182,8 @@ export class AuthService {
   // Sign out
   SignOut() {
     return this.afAuth.signOut().then(() => {
+      //this.afs.firestore.terminate().finally(() => {});
+      //this.afs.firestore.clearPersistence().finally(() => {});
       localStorage.removeItem('uid');
       localStorage.removeItem('emailVerified');
       this.router.navigate(['auth/sign-in']);
