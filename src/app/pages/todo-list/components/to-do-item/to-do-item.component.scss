@@ -13,6 +13,8 @@
       .action{
         display: flex;
         flex-direction: column;
+        align-items: end;
+
         .bookmark {
           img {
             width: 30px !important;
@@ -22,13 +24,12 @@
 
         .btn-action{
           display: flex;
+          margin-top: 10px;
           button img{
             width: 21px;
           }
         }
       }
-
-
 
     }
 
@@ -49,11 +50,6 @@
     .unCompleted {
       text-decoration: none;
     }
-
-    //.task-title {
-    //  font-weight: bold;
-    //  font-size: 18px;
-    //}
 
     .task-description {
       font-size: 16px;

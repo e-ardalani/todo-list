@@ -45,7 +45,7 @@ export class CreateItemComponent implements OnInit {
 
   onSubmit(form) {
     if (this?.data?.task) {
-      this.taskService.updateTask(this?.data?.task?.id, this?.data?.task?.title, this?.data?.task?.description).then(() => {
+      this.taskService.updateTask(this?.data?.task?.id, form?.title, form?.description).then(() => {
         this.dialogRef.close();
       }).finally(() => {
 
