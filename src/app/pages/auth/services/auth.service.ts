@@ -100,10 +100,10 @@ export class AuthService {
     return this.afAuth
       .sendPasswordResetEmail(passwordResetEmail)
       .then(() => {
-        window.alert('Password reset email sent, check your inbox.');
+        this.toastr.error('Password reset email sent, check your inbox.');
       })
       .catch((error) => {
-        window.alert(error);
+        this.toastr.error(error);
       });
   }
 
@@ -140,7 +140,7 @@ export class AuthService {
         try {
           firstName = result.user.displayName.split(' ')[0];
           lastName = result.user.displayName.replace(firstName, '');
-        }catch (e) {
+        } catch (e) {
           firstName = result.user.displayName;
         }
         this.SetUserData(result.user, firstName, lastName);

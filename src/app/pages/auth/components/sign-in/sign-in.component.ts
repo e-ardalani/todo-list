@@ -38,7 +38,6 @@ export class SignInComponent implements OnInit {
 
   singInByGoogleAuth() {
     this.authService.GoogleAuth().then(() => {
-      console.log('gggg');
       this.router.navigate(['dashboard']);
     });
   }
