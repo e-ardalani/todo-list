@@ -4,17 +4,24 @@
 
   .dialog-header {
     height: 40px;
-    background-color: #324458;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 3px;
+    border-bottom: 1px lightgray solid;
 
-    mat-icon {
-      color: white;
+    .dialog-title {
+      font-weight: bold;
+    }
+
+    img {
+      color: white !important;
+      width: 20px;
       margin-left: 15px;
       cursor: pointer;
-      -webkit-appearance: initial;
+
+      filter: invert(73%) sepia(14%) saturate(0%) hue-rotate(210deg) brightness(93%) contrast(91%);
+
     }
   }
 
@@ -48,14 +55,16 @@
         color: #d80612;
       }
 
-      .dialog-action {
+      .action {
         display: flex;
+        justify-content: center;
+        width: 100%;
 
-        .submit {
-          padding: 0 48px;
-          margin-left: 10px;
+        button {
+          width: 30%;
         }
       }
+
 
     }
 

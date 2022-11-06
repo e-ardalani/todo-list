@@ -24,7 +24,7 @@ export class ToggleLanguageComponent implements OnInit {
 
 
   onChange() {
-    window.location.href = `/${this.activeLocale}`;
+    window.location.href = `/todo-list/${this.activeLocale}`;
   }
 
   toggleLang() {

@@ -62,7 +62,6 @@ export class AuthService {
         });
       })
       .catch((error) => {
-        // console.log(error.errore.message);
         this.apiService.complete();
         this.toastr.error(error.message);
 
@@ -82,7 +81,7 @@ export class AuthService {
 
       })
       .catch((error) => {
-        window.alert(error.message);
+        this.toastr.error(error.message);
       });
   }
 
@@ -91,7 +90,7 @@ export class AuthService {
     return this.afAuth.currentUser
       .then((u: any) => u.sendEmailVerification())
       .then(() => {
-        // this.router.navigate(['verify-email-address']);
+        this.router.navigate(['verify-email-address']);
       });
   }
 
@@ -111,7 +110,6 @@ export class AuthService {
   get isLoggedIn(): boolean {
     // tslint:disable-next-line:no-non-null-assertion
     const user = localStorage.getItem('uid')!;
-    // const emailVerified = localStorage.getItem('emailVerified')!;
     const emailVerified = JSON.parse(localStorage.getItem('emailVerified')!);
     return user !== null && emailVerified === true;
   }
@@ -146,7 +144,7 @@ export class AuthService {
         this.SetUserData(result.user, firstName, lastName);
       })
       .catch((error) => {
-        window.alert(error);
+        this.toastr.error(error.message);
       });
   }
 
@@ -162,9 +160,6 @@ export class AuthService {
       email: user.email,
       photoURL: user.photoURL,
       emailVerified: user.emailVerified,
-      // firstName: firstName ? firstName : user.firstName,
-      // lastName: lastName ? lastName : user.lastName,
-      // tasks: []
     };
     if (firstName) {
       userData.firstName = firstName;
@@ -182,8 +177,6 @@ export class AuthService {
   // Sign out
   SignOut() {
     return this.afAuth.signOut().then(() => {
-      //this.afs.firestore.terminate().finally(() => {});
-      //this.afs.firestore.clearPersistence().finally(() => {});
       localStorage.removeItem('uid');
       localStorage.removeItem('emailVerified');
       this.router.navigate(['auth/sign-in']);

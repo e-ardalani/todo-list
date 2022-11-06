@@ -1,23 +1,28 @@
 <div class="dialog-header">
-  <mat-icon mat-dialog-close>x</mat-icon>
+  <img src="./assets/images/close.svg" alt="close" i18n-alt (click)="cancel()">
+  <span i18n class="dialog-title">
+    Delete Task
+  </span>
+  <span> </span>
 </div>
 <div class="dialog-content">
   <div class="dialog-container">
     <img src="./assets/images/error.svg" alt="">
-    <span class="dialog-title">Are You Sure ?</span>
-    <div class="dialog-action">
-      <div>
-        <button (click)="submit()"
-                class="py-2 mr-4 w-40 px-4 bg-blue-600 text-white font-semibold border border-blue-600 rounded hover:bg-white hover:text-blue-600 hover:border-blue-600"
-        >Yes
-        </button>
-      </div>
-      <div>
-        <button (click)="reset()"
-          class="py-2 px-4 w-40 bg-transparent text-red-600 font-semibold border border-red-600 rounded hover:bg-red-600 hover:text-white hover:border-transparent"
-        >Cancel
-        </button>
-      </div>
+    <span class="dialog-title" i18n>Are You Sure ?</span>
+    <div class="action">
+      <button (click)="submit()" i18n
+              type="button"
+              class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline"
+      >
+        Yes
+      </button>
+
+      <button
+        type="button"
+        class="border border-gray-200 bg-gray-200 text-gray-700 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+        (click)="cancel()">
+        Cancel
+      </button>
     </div>
   </div>
 </div>

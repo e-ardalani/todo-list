@@ -16,6 +16,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 export class CreateItemComponent implements OnInit {
   formGroup: FormGroup;
   tasks: Observable<any[]>;
+  isEdit = false;
 
 
   constructor(private db: AngularFirestore,
@@ -27,6 +28,7 @@ export class CreateItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
+    this.data.task ? this.isEdit = true : this.isEdit = false;
     if (this.data.task) {
       this.formGroup.patchValue({
         title: this.data?.task?.title,
@@ -42,7 +44,7 @@ export class CreateItemComponent implements OnInit {
     });
   }
 
-  reset() {
+  cancel() {
     this.dialogRef.close(false);
   }
 

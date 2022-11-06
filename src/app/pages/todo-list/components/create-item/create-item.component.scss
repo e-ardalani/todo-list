@@ -1,4 +1,97 @@
-button{
-  margin-top: 30px;
+
+:host {
+  display: block;
+
+  .dialog-header {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3px;
+    border-bottom: 1px lightgray solid;
+
+    .dialog-title {
+      font-weight: bold;
+    }
+
+    img {
+      color: white !important;
+      width: 20px;
+      margin-left: 15px;
+      cursor: pointer;
+
+      filter: invert(73%) sepia(14%) saturate(0%) hue-rotate(210deg) brightness(93%) contrast(91%);
+
+    }
+  }
+
+  .dialog-content {
+    form {
+      padding: 10px !important;
+    }
+
+    .action {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      button {
+        width: 30%;
+      }
+    }
+  }
+
+  //.dialog-content {
+  //  display: flex;
+  //  min-height: 200px;
+  //  position: relative;
+  //  width: 550px;
+  //  overflow: auto;
+  //  bottom: 0;
+  //  margin: 20px 0;
+  //
+  //  //.dialog-container {
+  //  //  display: flex;
+  //  //  flex-direction: column;
+  //  //  justify-content: center;
+  //  //  align-items: center;
+  //  //  width: 100%;
+  //  //
+  //  //  img {
+  //  //    width: 70px;
+  //  //  }
+  //  //
+  //  //  .dialog-title {
+  //  //    font-weight: bold;
+  //  //    font-stretch: normal;
+  //  //    font-style: normal;
+  //  //    line-height: 5;
+  //  //    letter-spacing: normal;
+  //  //    text-align: right;
+  //  //    color: #d80612;
+  //  //  }
+  //  //
+  //  //  .dialog-action {
+  //  //    display: flex;
+  //  //
+  //  //    .submit {
+  //  //      padding: 0 48px;
+  //  //      margin-left: 10px;
+  //  //    }
+  //  //  }
+  //  //
+  //  //}
+  //
+  //}
 }
+
+::ng-deep .mat-dialog-container {
+  padding: 0;
+  background-color: var(--card-item) !important;
+  overflow: hidden;
+
+}
+
+
+
 

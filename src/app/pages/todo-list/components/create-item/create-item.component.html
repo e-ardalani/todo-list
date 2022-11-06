@@ -1,7 +1,9 @@
-<!--<div class="dialog-header">-->
-<!--  <mat-icon mat-dialog-close>x</mat-icon>-->
-<!--</div>-->
-<mat-dialog-content>
+<div class="dialog-header">
+  <img src="./assets/images/close.svg" alt="close" i18n-alt  (click)="cancel()">
+  <span i18n class="dialog-title">{{isEdit ? 'Edit Task' : 'Add Task'}}</span>
+  <span> </span>
+</div>
+<mat-dialog-content class="dialog-content">
   <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
 
     <app-custom-input
@@ -17,12 +19,23 @@
                           [label]="'description'"
                           class="margin-input"></app-custom-text-area>
 
-
-    <div class="form-element">
-      <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Add
-      </button>
-    </div>
-
   </form>
+
+  <div class="action">
+    <button (click)="onSubmit(formGroup.value)" i18n
+            type="button"
+            class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline"
+            [disabled]="!formGroup.valid">
+      {{isEdit ? 'Edit' : 'Add'}}
+    </button>
+
+    <button
+      type="button"
+      class="border border-gray-200 bg-gray-200 text-gray-700 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
+   (click)="cancel()" >
+      Cancel
+    </button>
+  </div>
+
 </mat-dialog-content>
 

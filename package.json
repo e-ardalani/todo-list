@@ -11,7 +11,7 @@
     "build-prod": "ng build --configuration production",
     "start:fa": "ng serve --configuration=fa",
     "i18n:extract": "ng extract-i18n --output-path src/locale",
-    "deploy": "ng build --configuration production --base-href https://e-ardalani.github.io/todo-list --localize && ngh"
+    "deploy": "ng build --configuration production --base-href https://e-ardalani.github.io/todo-list --localize && copyfiles -f src/404.html dist && ngh"
   },
   "private": true,
   "dependencies": {

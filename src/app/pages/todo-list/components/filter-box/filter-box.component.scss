@@ -6,13 +6,11 @@
   margin: 10px 0;
   @include media-breakpoint('lt-md') {
     margin: 0 0 10px 0;
-
   }
-
-
-    .task-count {
-    background-color: blue;
-    color: white !important;
+  .task-count {
+    background-color: var(--bkg-color);
+    color: var(--text-color) !important;
+    cursor: pointer;
   }
 
 }
