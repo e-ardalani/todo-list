@@ -11,6 +11,7 @@ import {AuthService} from '../../../auth/services/auth.service';
 import {DialogConfirmComponent} from '../../../../shared/components/dialog-confirm/dialog-confirm.component';
 import {MatBottomSheet} from '@angular/material/bottom-sheet';
 import {ConfirmBottomSheetComponent} from '../../../../shared/components/confirm-bottom-sheet/confirm-bottom-sheet.component';
+import {CreateItemBottomSheetComponent} from '../create-item-bottom-sheet/create-item-bottom-sheet.component';
 
 
 @Component({
@@ -21,9 +22,10 @@ import {ConfirmBottomSheetComponent} from '../../../../shared/components/confirm
 export class ToDoListComponent implements OnInit, OnDestroy {
   tasks: Task[];
   subscriptions: Subscription = new Subscription();
-  screenMode;
-  public getScreenWidth: any;
-  public getScreenHeight: any;
+  isMobile: boolean = false;
+  width: number = window.innerWidth;
+  height: number = window.innerHeight;
+  mobileWidth: number = 760;
 
 
   constructor(private db: AngularFirestore, private taskService: TaskService,
@@ -40,8 +42,7 @@ export class ToDoListComponent implements OnInit, OnDestroy {
   // }
 
   ngOnInit(): void {
-    this.getScreenWidth = window.innerWidth;
-    this.getScreenHeight = window.innerHeight;
+    this.isMobile = this.width < this.mobileWidth;
     this.subscriptions.add(this.taskService.taskFiltered$.asObservable().subscribe(tasks => {
       this.tasks = tasks;
     }));
@@ -50,8 +51,9 @@ export class ToDoListComponent implements OnInit, OnDestroy {
 
   @HostListener('window:resize', ['$event'])
   onWindowResize() {
-    this.getScreenWidth = window.innerWidth;
-    this.getScreenHeight = window.innerHeight;
+    this.width = window.innerWidth;
+    this.height = window.innerHeight;
+    this.isMobile = this.width < this.mobileWidth;
   }
 
   getTasks() {
@@ -76,15 +78,22 @@ export class ToDoListComponent implements OnInit, OnDestroy {
 
 
   openDialogTask(task?: string) {
-    const dialog = this.dialog.open(CreateItemComponent, {
+    if (this.isMobile) {
+      const bSheet = this.bottomSheet.open(CreateItemBottomSheetComponent, {
+        disableClose: true,
+        hasBackdrop: true,
+        data: {task}
+      });
+      bSheet.afterDismissed().subscribe(() => {
+      });
+    } else {
+      this.dialog.open(CreateItemComponent, {
         disableClose: false,
         width: '400px',
         height: 'auto',
         data: {task}
-      })
-    ;
-    dialog.afterClosed().subscribe((task) => {
-    });
+      });
+    }
   }
 
   onDone(task) {
@@ -96,7 +105,7 @@ export class ToDoListComponent implements OnInit, OnDestroy {
   }
 
   onRemove(task) {
-    if (this.getScreenWidth > 959) {
+    if (!this.isMobile) {
       const dialog = this.dialog.open(DialogConfirmComponent, {
         disableClose: true,
       });
@@ -110,7 +119,7 @@ export class ToDoListComponent implements OnInit, OnDestroy {
       const bSheet = this.bottomSheet.open(ConfirmBottomSheetComponent, {
         disableClose: true,
       });
-      bSheet.afterDismissed().subscribe((task) => {
+      bSheet.afterDismissed().subscribe(() => {
       });
     }
   }

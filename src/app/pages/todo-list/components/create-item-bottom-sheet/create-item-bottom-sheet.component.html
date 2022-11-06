@@ -1,24 +1,42 @@
-<!--<mat-dialog-content>-->
-<!--  <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">-->
+<div class="bottom-sheet-container">
+  <div class="bottom-sheet-top-line"><span></span></div>
 
-<!--    <app-custom-input-->
-<!--      [name]="'title'"-->
-<!--      [label]="'title'"-->
-<!--      class="margin-input-title" formControlName="title"-->
-<!--      [formControl]="formGroup.controls['title']">-->
-<!--    </app-custom-input>-->
+  <div class="dialog-content">
+    <span class="bottom-sheet-title" i18n>{{isEdit ? 'Edit Task' :'Create Task'}}</span>
+    <div class="bottom-sheet-content">
+      <form [formGroup]="formGroup"  class="form">
 
-<!--    <app-custom-text-area formControlName="description"-->
-<!--                          [formControl]="formGroup.controls['description']"-->
-<!--                          [name]="'description'"-->
-<!--                          [label]="'description'"-->
-<!--                          class="margin-input"></app-custom-text-area>-->
+        <app-custom-input
+          [name]="'title'"
+          [label]="'title'"
+          class="margin-input-title" formControlName="title"
+          [formControl]="formGroup.controls['title']">
+        </app-custom-input>
+
+        <app-custom-text-area formControlName="description"
+                              [formControl]="formGroup.controls['description']"
+                              [name]="'description'"
+                              [label]="'description'"
+                              class="margin-input"></app-custom-text-area>
+
+        <div class="action">
+          <button (click)="onSubmit(formGroup.value)" i18n
+            type="button"
+            class="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+            [disabled]="!formGroup.valid">
+            {{isEdit ? 'Edit' :'Add'}}
+          </button>
+
+          <button
+            type="button"
+            class="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
+         (click)="cancel()" >
+            Cancel
+          </button>
+        </div>
 
 
-<!--    <div class="form-element">-->
-<!--      <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Add-->
-<!--      </button>-->
-<!--    </div>-->
-
-<!--  </form>-->
-<!--</mat-dialog-content>-->
+      </form>
+    </div>
+  </div>
+</div>

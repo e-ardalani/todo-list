@@ -3,20 +3,23 @@
     <div class="remove-container">
       <img src="./assets/images/error.svg" alt="">
       <span i18n>Are You Sure?</span>
+
       <div class="bottom-sheet-action">
-        <div>
-          <button (click)="submit()"
-                  class="py-2 mr-4 w-40 px-4 bg-blue-600 text-white font-semibold border border-blue-600 rounded hover:bg-white hover:text-blue-600 hover:border-blue-600"
-          >Yes
-          </button>
-        </div>
-        <div>
-          <button (click)="reset()"
-                  class="py-2 px-4 w-40 bg-transparent text-red-600 font-semibold border border-red-600 rounded hover:bg-red-600 hover:text-white hover:border-transparent"
-          >Cancel
-          </button>
-        </div>
+        <button (click)="submit()" i18n
+                type="button"
+                class="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+        >
+          Yes
+        </button>
+
+        <button i18n
+          type="button"
+          class="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
+          (click)="reset()">
+          Cancel
+        </button>
       </div>
+
 
     </div>
     <template #container></template>

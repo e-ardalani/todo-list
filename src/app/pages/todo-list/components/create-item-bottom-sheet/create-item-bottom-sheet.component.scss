@@ -1,0 +1,75 @@
+
+::ng-deep {
+  .mat-bottom-sheet-container {
+    border-radius: 5px 5px 0 0;
+    min-height: 40vh;
+    background-color: var(--bg-secondary);
+  }
+}
+
+
+:host {
+  display: block;
+  border: 3px solid var(--primary);
+
+  .dialog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 150px;
+    position: relative;
+    width: 100%;
+    overflow: auto;
+
+    .bottom-sheet-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .bottom-sheet-content {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      button{
+        width: 96%;
+        margin-top: 25px;
+      }
+    }
+  }
+
+}
+
+
+.bottom-sheet-container {
+  padding: 5px;
+  position: relative;
+
+  .dialog-content {
+    min-height: 40vh;
+    padding-top: 20px;
+    overflow: hidden !important;
+
+    .action{
+      display: flex;
+      margin-top: 40px;
+    }
+  }
+
+  .bottom-sheet-top-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    span {
+      position: absolute;
+      top: 10px;
+      background: #707070;
+      height: 1.5px;
+      width: 25%;
+    }
+  }
+}
+
+
