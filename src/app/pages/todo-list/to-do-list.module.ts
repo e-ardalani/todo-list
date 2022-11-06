@@ -3,8 +3,8 @@ import {ToDoListComponent} from './components/to-do-list/to-do-list.component';
 import {ToDoItemComponent} from './components/to-do-item/to-do-item.component';
 import {CreateItemComponent} from './components/create-item/create-item.component';
 import {SharedModule} from '../../shared/shared.module';
-import {UpdateTaskComponent} from './components/update-task/update-task.component';
 import {FilterBoxComponent} from './components/filter-box/filter-box.component';
+import { CreateItemBottomSheetComponent } from './components/create-item-bottom-sheet/create-item-bottom-sheet.component';
 
 
 @NgModule({
@@ -12,13 +12,13 @@ import {FilterBoxComponent} from './components/filter-box/filter-box.component';
     ToDoListComponent,
     ToDoItemComponent,
     CreateItemComponent,
-    UpdateTaskComponent,
     FilterBoxComponent,
+    CreateItemBottomSheetComponent,
   ],
   imports: [
     SharedModule
   ],
-  exports: [ToDoListComponent, UpdateTaskComponent, FilterBoxComponent],
+  exports: [ToDoListComponent, FilterBoxComponent],
   entryComponents: [CreateItemComponent]
 })
 export class ToDoListModule {

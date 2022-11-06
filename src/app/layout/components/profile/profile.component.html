@@ -1,16 +1,23 @@
 <div class="bg-gray-100 shadow-lg flex items-center rounded-full" [matMenuTriggerFor]="menu" *ngIf="user$">
   <img [src]="(user$ |async)?.photoURL ? (user$ |async)?.photoURL :'./assets/images/user.png'"
-       class="p-1 h-6 sm:h-9 shadow-lg flex items-center rounded-full" alt="photo"/>
+       class="h-6 sm:h-9 shadow-lg flex items-center rounded-full" alt="photo"/>
 </div>
-<mat-menu #menu="matMenu">
-  <div class="menu-container">
-    <img [src]="(user$ |async)?.photoURL ? (user$ |async)?.photoURL :'./assets/images/user.png'"
-         class="p-1 h-6 sm:h-9 shadow-lg flex items-center rounded-full profile-photo" alt="photo"/>
-    <div class="user-info">
-      <p class="user-email">{{(user$ |async)?.email}}</p>
+<div class="profile-container">
+  <mat-menu #menu="matMenu">
+    <div class="menu-container">
+      <img [src]="(user$ |async)?.photoURL ? (user$ |async)?.photoURL :'./assets/images/user.png'"
+           class="h-6 sm:h-9 shadow-lg flex items-center rounded-full profile-photo" alt="photo"/>
+      <div class="user-info">
+        <p class="user-email">{{(user$ |async)?.firstName}} {{(user$ |async)?.lastName}}</p>
+        <p class="user-email">{{(user$ |async)?.email}}</p>
+      </div>
     </div>
-  </div>
-  <hr>
-  <a class="sign-out" (click)="signOut()">sign-out</a>
+    <hr>
+    <div class="sign-out">
+      <a  (click)="signOut()">sign-out</a>
+      <img src="./assets/images/log-out.svg">
+    </div>
 
-</mat-menu>
+
+  </mat-menu>
+</div>

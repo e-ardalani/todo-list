@@ -1,10 +1,17 @@
-span{
+span {
   font-weight: 600 !important;
   font-size: 16px;
   line-height: 48px;
   color: white !important;
 }
 
-header{
+header {
   border-bottom: 1px var(--bg-secondary) solid;
+}
+
+
+.lang {
+  background-color: #e7dcdc;
+  padding: 3px;
+  margin-right: 10px;
 }

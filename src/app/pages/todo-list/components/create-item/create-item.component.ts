@@ -42,6 +42,10 @@ export class CreateItemComponent implements OnInit {
     });
   }
 
+  reset() {
+    this.dialogRef.close(false);
+  }
+
 
   onSubmit(form) {
     if (this?.data?.task) {

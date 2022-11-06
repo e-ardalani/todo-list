@@ -1,21 +1,6 @@
-<h2 mat-dialog-title>Add Task</h2>
-
-<!--<mat-dialog-content class="mat-typography">-->
-
-<!--</mat-dialog-content>-->
-<!--<mat-dialog-actions align="end">-->
-<!--  <button mat-button mat-dialog-close>Cancel</button>-->
-<!--  <button mat-button>Add</button>-->
-<!--</mat-dialog-actions>-->
-
-
-<!--<tr *ngFor="let task of tasks | async; let i = index">-->
-<!--  <td>{{i + 1}}</td>-->
-<!--  <td>{{task.title}}</td>-->
-<!--</tr>-->
-
-
-
+<!--<div class="dialog-header">-->
+<!--  <mat-icon mat-dialog-close>x</mat-icon>-->
+<!--</div>-->
 <mat-dialog-content>
   <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
 
@@ -34,9 +19,10 @@
 
 
     <div class="form-element">
-      <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Submit Form
+      <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Add
       </button>
     </div>
 
   </form>
 </mat-dialog-content>
+

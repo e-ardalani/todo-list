@@ -25,7 +25,6 @@
     width: 550px;
     overflow: auto;
     bottom: 0;
-    background-color: white;
     margin: 20px 0;
 
     .dialog-container {
@@ -65,6 +64,8 @@
 
 ::ng-deep .mat-dialog-container {
   padding: 0;
+  background-color: var(--card-item) !important;
+
 }
 
 

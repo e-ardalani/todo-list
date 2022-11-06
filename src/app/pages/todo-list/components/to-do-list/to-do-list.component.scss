@@ -8,7 +8,9 @@
   margin-bottom: 8px;
   display: flex;
   align-items: center;
-  //cursor: pointer;
+  background-color: var(--card-item);
+
+  cursor: pointer;
 
   svg{
     path{
