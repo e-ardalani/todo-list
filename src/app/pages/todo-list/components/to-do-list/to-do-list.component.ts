@@ -25,9 +25,9 @@ export class ToDoListComponent implements OnInit {
     this.tasks = [];
   }
 
-  sortByDateDesc(l: Task, r: Task) {
-    return r.creationDate - l.creationDate;
-  }
+  // sortByDateDesc(l: Task, r: Task) {
+  //   return r.creationDate - l.creationDate;
+  // }
 
   ngOnInit(): void {
     this.getTasks();

@@ -1,6 +1,14 @@
 .dashboard-container {
   display: flex;
-  background-color: #faf9f8 !important;
-  height: 90%;
+  flex-direction: column;
+  height: 100%;
+
+  .task-container {
+    display: flex;
+    background-color: var(--bg-secondary) !important;
+    height: 90%;
+  }
 }
+
+
 

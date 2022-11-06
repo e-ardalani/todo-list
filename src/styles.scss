@@ -25,17 +25,24 @@ a {
 body {
   --text-color: #222;
   --bkg-color: #fff;
+  --bkg-filter-color: #fff;
   --btn-txt-color: white;
   --btn-bg-color: rgb(11, 88, 160);
   --primary-color: #2564cf !important;
+  --bg-secondary: #faf9f8;
+  --bg-separator: #e1dfdd;
 }
 
 body.dark-theme {
   --text-color: #eee;
   --bkg-color: rgba(0, 0, 0, .87);
   --btn-txt-color: rgb(46, 43, 43);
+  --bkg-filter-color: rgb(49, 47, 47);
   --btn-bg-color: rgb(20, 211, 195);
+  --bg-secondary: #11100f;
   --primary-color: #1B1A19 !important;
+  --bg-separator: #484644;
+
 
 }
 

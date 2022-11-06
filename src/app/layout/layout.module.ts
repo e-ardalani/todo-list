@@ -6,7 +6,6 @@ import {LayoutRoutingModule} from './layout-routing.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {SharedModule} from '../shared/shared.module';
 import { ProfileComponent } from './components/profile/profile.component';
-import { SettingComponent } from './components/setting/setting.component';
 import {CreateItemComponent} from '../pages/todo-list/components/create-item/create-item.component';
 import {ToDoListModule} from '../pages/todo-list/to-do-list.module';
 
@@ -17,7 +16,6 @@ import {ToDoListModule} from '../pages/todo-list/to-do-list.module';
     DashboardComponent,
     SidebarComponent,
     ProfileComponent,
-    SettingComponent
   ],
   imports: [
     CommonModule,
