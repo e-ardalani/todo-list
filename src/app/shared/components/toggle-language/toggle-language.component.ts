@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Inject, LOCALE_ID, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-toggle-language',
@@ -9,11 +9,22 @@ export class ToggleLanguageComponent implements OnInit {
   lang = 'En';
   @Output() selectLang = new EventEmitter();
 
-  constructor() {
+  locales = [
+    {code: 'en', name: 'English'},
+    {code: 'fa', name: 'فارسی'},
+  ];
+
+  constructor(@Inject(LOCALE_ID) public activeLocale: string
+  ) {
   }
 
   ngOnInit(): void {
     this.lang = localStorage.getItem('lang') === 'En' ? 'En' : 'Fa';
+  }
+
+
+  onChange() {
+    window.location.href = `/${this.activeLocale}`;
   }
 
   toggleLang() {

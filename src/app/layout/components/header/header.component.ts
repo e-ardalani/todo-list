@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {TaskService} from '../../../pages/todo-list/services/task.service';
 import {UserInfoDialogComponent} from '../user-info-dialog/user-info-dialog.component';
 import {MatDialog} from '@angular/material/dialog';
@@ -8,7 +8,7 @@ import {MatDialog} from '@angular/material/dialog';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
 
   constructor(private taskService: TaskService,
@@ -16,8 +16,6 @@ export class HeaderComponent implements OnInit {
   ) {
   }
 
-  ngOnInit(): void {
-  }
 
   search(term: string) {
     this.taskService.search(term);
@@ -25,7 +23,7 @@ export class HeaderComponent implements OnInit {
 
 
   openDialogUser() {
-    const dialog = this.dialog.open(UserInfoDialogComponent, {
+    this.dialog.open(UserInfoDialogComponent, {
       disableClose: false,
     });
   }

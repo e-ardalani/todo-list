@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="cdb0bee7d8d8e224deb70ff09f19c496902d1967" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/components/user-info-dialog/user-info-dialog.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="59aeda2f9c0fe01f0401af5ca42ce3a17b8a5bd8" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="&lt;/span&gt;
+    &lt;/div&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/components/user-info-dialog/user-info-dialog.component.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="34557152cff7bc7db72a2a8706794d7fba4bac86" datatype="html">
+        <source>Reset Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2a7a93ed9d8131ba296d6c772603ed2517dc1eeb" datatype="html">
+        <source> Please enter your email address to request a password reset. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ec984ab36f1da5f75ba43f9bd4b866ca9c7e6493" datatype="html">
+        <source>Email Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dc0ac10a69406f49d84d2e4d3a883f97b66528e2" datatype="html">
+        <source> Reset Password </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fcd88a8051290efb469f1dc886e67b440eec1bad" datatype="html">
+        <source> Go back to ? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;/auth/sign-in&quot; class=&quot;text-purple-700 hover:text-purple-600&quot;&gt;"/> Sign In <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">28,31</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="96db6e75978be5fb545ecbdaa1a11354499f05e9" datatype="html">
         <source>Sign In </source>
         <context-group purpose="location">
@@ -48,11 +98,67 @@
           <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="52dbd75d1a9450dce3efa477b38cf3534f7f2004" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{isEdit ? &apos;Edit Task&apos; :&apos;Create Task&apos;}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/create-item-bottom-sheet/create-item-bottom-sheet.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="569956a884fdc683398007334959f81e775cdbaa" datatype="html">
+        <source> <x id="INTERPOLATION" equiv-text="{{isEdit ? &apos;Edit&apos; :&apos;Add&apos;}}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/create-item-bottom-sheet/create-item-bottom-sheet.component.html</context>
+          <context context-type="linenumber">26,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8afc5f9a59b8d5dc2f54ab3f1f0498d073719968" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span matChipAvatar class=&quot;task-count&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{totalCount}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> All</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/filter-box/filter-box.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6ac70b588d26ccee45942189a41bcc04c25d2450" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span matChipAvatar class=&quot;task-count&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{bookmarkCount}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Star</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/filter-box/filter-box.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b2ec2dccd1729eebd6d817b5dafcd58b5f757fce" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span matChipAvatar class=&quot;task-count&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{doneCount}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>Completed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/filter-box/filter-box.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8f0c90ae23276b18ae51ab7034152f163c139c1a" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span matChipAvatar class=&quot;task-count&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{ongoingCount}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> OnGoing</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/filter-box/filter-box.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="829ee6ae59965f00eb75aa275b361130c5259daa" datatype="html">
         <source>Are You Sure?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/confirm-bottom-sheet/confirm-bottom-sheet.component.html</context>
           <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a4104c796fb16a55e886aa5ef1424ce06cadfa34" datatype="html">
+        <source> Yes </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/confirm-bottom-sheet/confirm-bottom-sheet.component.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fb8aad312b72bbb7e5a1e2cc0b55fae8962bf0fb" datatype="html">
+        <source> Cancel </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/confirm-bottom-sheet/confirm-bottom-sheet.component.html</context>
+          <context context-type="linenumber">18,20</context>
         </context-group>
       </trans-unit>
     </body>

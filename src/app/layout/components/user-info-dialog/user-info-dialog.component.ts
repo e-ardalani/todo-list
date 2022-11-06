@@ -27,7 +27,6 @@ export class UserInfoDialogComponent implements OnInit {
 
   getLang(event) {
     this.lang = event;
-    console.log(typeof this.lang);
   }
 
   getUserInfo() {

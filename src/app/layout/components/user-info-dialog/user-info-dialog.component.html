@@ -1,13 +1,11 @@
 <div class="dialog-header">
-  <mat-icon mat-dialog-close><img src="./assets/images/close.svg"></mat-icon>
-<!--  <h1>Profile</h1>-->
-<!--  <span> </span>-->
+  <mat-icon mat-dialog-close><img src="./assets/images/close.svg" alt="close" i18n-alt></mat-icon>
 </div>
 <div class="profile-container">
   <div class="dialog-content">
     <div class="profile-content">
       <img [src]="(user$ |async)?.photoURL ? (user$ |async)?.photoURL :'./assets/images/user.png'"
-           class="h-6 sm:h-9 shadow-lg flex items-center rounded-full profile-photo" alt="photo"/>
+           class="h-6 sm:h-9 shadow-lg flex items-center rounded-full profile-photo" alt="photo" i18n-alt/>
       <div class="user-info">
         <p>{{(user$ |async)?.firstName}} {{(user$ |async)?.lastName}}</p>
         <p>{{(user$ |async)?.email}}</p>

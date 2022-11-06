@@ -8,13 +8,17 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class ToggleThemeComponent implements OnInit {
   isDarkTheme = false;
   @Output() darkMode = new EventEmitter();
+  theme;
 
 
   constructor() {
   }
 
   ngOnInit(): void {
-    this.isDarkTheme = localStorage.getItem('dark-mode') === 'Dark' ? true : false;
+    this.theme = localStorage.getItem('dark-mode');
+    if (this.theme) {
+      this.isDarkTheme = localStorage.getItem('dark-mode') === 'Dark' ? true : false;
+    }
     if (this.isDarkTheme) {
       document.body.classList.toggle('dark-theme');
 
@@ -24,8 +28,9 @@ export class ToggleThemeComponent implements OnInit {
 
 
   toggleTheme() {
-    const darkMode = JSON.stringify(this.isDarkTheme);
-    localStorage.setItem('dark-mode', darkMode);
+    // const darkMode = JSON.stringify(this.isDarkTheme);
+    // console.log(darkMode);
+    // localStorage.setItem('dark-mode', (!this.theme) ? 'true': this.isDarkTheme);
     this.isDarkTheme = !this.isDarkTheme;
     document.body.classList.toggle('dark-theme');
     this.darkMode.emit(this.isDarkTheme);

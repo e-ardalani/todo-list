@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {AngularFirestore} from '@angular/fire/compat/firestore';
-import {AngularFireAuth} from '@angular/fire/compat/auth';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {AuthService} from '../../pages/auth/services/auth.service';
@@ -13,7 +12,6 @@ export class UserService {
   userId = this.authService.getUid();
 
   constructor(public afs: AngularFirestore,
-              public afAuth: AngularFireAuth,
               private authService: AuthService) {
   }
 
