@@ -11,6 +11,10 @@ header {
   border-bottom: 1px var(--bg-secondary) solid;
 }
 
+.header-container {
+  background-color: var(--primary-color);
+}
+
 
 .lang {
   background-color: #e7dcdc;
@@ -20,12 +24,15 @@ header {
 
 
 @include media-breakpoint('lt-md') {
-  //span{
-  //  display: none;
-  //}
+  .avatar {
+    width: 40px !important;
+    height: 40px !important;
+  }
 }
 
 
 #menu-toggle:checked + #menu {
   display: block;
 }
+
+

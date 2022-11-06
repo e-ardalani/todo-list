@@ -9,6 +9,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import {CreateItemComponent} from '../pages/todo-list/components/create-item/create-item.component';
 import {ToDoListModule} from '../pages/todo-list/to-do-list.module';
 import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
+import { UserInfoDialogComponent } from './components/user-info-dialog/user-info-dialog.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
     DashboardComponent,
     SidebarComponent,
     ProfileComponent,
+    UserInfoDialogComponent,
   ],
   imports: [
     CommonModule,

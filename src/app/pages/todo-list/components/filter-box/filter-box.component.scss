@@ -3,18 +3,21 @@
 
 .filter-container {
   background-color: var(--bg-secondary) !important;
-  margin: 0 0 10px 0;
+  margin: 10px 0;
+  @include media-breakpoint('lt-md') {
+    margin: 0 0 10px 0;
+
+  }
 
 
-
-  .task-count {
+    .task-count {
     background-color: blue;
     color: white !important;
   }
 
 }
 
-mat-chip{
+mat-chip {
   min-width: 100px !important;
   display: flex;
   justify-content: space-between;
@@ -23,7 +26,7 @@ mat-chip{
     min-width: 120px !important;
 
   }
-  }
+}
 
 @include media-breakpoint('lt-md') {
   ::ng-deep .mat-chip-list-wrapper {
@@ -31,6 +34,11 @@ mat-chip{
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 10px;
+    justify-content: flex-start !important;
+
   }
 }
 
+::ng-deep .mat-chip-list-wrapper {
+  justify-content: center;
+}

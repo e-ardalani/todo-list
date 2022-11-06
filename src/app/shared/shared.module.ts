@@ -8,6 +8,7 @@ import {CustomTextAreaComponent} from './components/custom-text-area/custom-text
 import {ToggleThemeComponent} from './components/toggle-theme/toggle-theme.component';
 import {DialogConfirmComponent} from './components/dialog-confirm/dialog-confirm.component';
 import {ConfirmBottomSheetComponent} from './components/confirm-bottom-sheet/confirm-bottom-sheet.component';
+import { ToggleLanguageComponent } from './components/toggle-language/toggle-language.component';
 
 
 const modules = [
@@ -26,19 +27,21 @@ const modules = [
     ToggleThemeComponent,
     DialogConfirmComponent,
     ConfirmBottomSheetComponent,
+    ToggleLanguageComponent,
   ],
   imports: [
     CommonModule,
     ...modules,
   ],
 
-  exports: [
-    ...modules,
-    CustomInputComponent,
-    CustomTextAreaComponent,
-    LoadingComponent,
-    ToggleThemeComponent,
-  ],
+    exports: [
+        ...modules,
+        CustomInputComponent,
+        CustomTextAreaComponent,
+        LoadingComponent,
+        ToggleThemeComponent,
+        ToggleLanguageComponent,
+    ],
   entryComponents: [DialogConfirmComponent]
 })
 export class SharedModule {

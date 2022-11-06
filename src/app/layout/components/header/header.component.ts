@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TaskService} from '../../../pages/todo-list/services/task.service';
+import {UserInfoDialogComponent} from '../user-info-dialog/user-info-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +11,9 @@ import {TaskService} from '../../../pages/todo-list/services/task.service';
 export class HeaderComponent implements OnInit {
 
 
-  constructor(private taskService: TaskService) {
+  constructor(private taskService: TaskService,
+              public dialog: MatDialog,
+  ) {
   }
 
   ngOnInit(): void {
@@ -20,6 +24,11 @@ export class HeaderComponent implements OnInit {
   }
 
 
+  openDialogUser() {
+    const dialog = this.dialog.open(UserInfoDialogComponent, {
+      disableClose: false,
+    });
+  }
 
 
 }

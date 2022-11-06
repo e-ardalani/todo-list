@@ -1,0 +1,64 @@
+.dialog-header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 0 0 20px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bkg-color);
+  //padding: 10px !important;
+
+
+  .dialog-content {
+    min-height: 200px;
+    width: 95%;
+
+
+    .profile-content {
+      display: flex;
+      padding: 20px;
+      align-items: center;
+
+      img {
+        width: 70px;
+        height: 70px;
+      }
+
+      .user-info {
+        margin-left: 20px;
+      }
+    }
+
+    .dark-mode-container {
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      padding-top: 20px;
+      font-size: 18px;
+    }
+
+    .lang-container {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      padding: 20px 0 20px 20px;
+    }
+
+
+  }
+}
+
+
+::ng-deep .mat-dialog-container {
+  padding: 0;
+  background-color: var(--card-item) !important;
+  width: 95% !important;
+
+}
+
+::ng-deep .cdk-overlay-pane {
+  width: 95% !important;
+  justify-content: center !important;
+}

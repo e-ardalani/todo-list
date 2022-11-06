@@ -1,4 +1,14 @@
-button{
+@import "partial/breakpoints";
+
+
+@include media-breakpoint('lt-md') {
+  button{
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+button {
   width: 25px;
   margin-right: 10px;
   height: 30px;
