@@ -17,9 +17,8 @@ import {FilterBoxComponent} from './components/filter-box/filter-box.component';
   ],
   imports: [
     SharedModule
-
   ],
-  exports: [ToDoListComponent, UpdateTaskComponent],
+  exports: [ToDoListComponent, UpdateTaskComponent, FilterBoxComponent],
   entryComponents: [CreateItemComponent]
 })
 export class ToDoListModule {

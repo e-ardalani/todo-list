@@ -10,12 +10,25 @@
       justify-content: space-between;
       padding: 8px;
 
-      .bookmark {
-        img {
-          width: 30px !important;
-          cursor: pointer !important;
+      .action{
+        display: flex;
+        flex-direction: column;
+        .bookmark {
+          img {
+            width: 30px !important;
+            cursor: pointer !important;
+          }
+        }
+
+        .btn-action{
+          display: flex;
+          button img{
+            width: 21px;
+          }
         }
       }
+
+
 
     }
 

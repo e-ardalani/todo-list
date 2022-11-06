@@ -8,6 +8,7 @@ import {SharedModule} from '../shared/shared.module';
 import { ProfileComponent } from './components/profile/profile.component';
 import {CreateItemComponent} from '../pages/todo-list/components/create-item/create-item.component';
 import {ToDoListModule} from '../pages/todo-list/to-do-list.module';
+import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {ToDoListModule} from '../pages/todo-list/to-do-list.module';
     CommonModule,
     LayoutRoutingModule,
     ToDoListModule,
-    SharedModule
+    SharedModule,
+    MatDialogModule
   ],
   entryComponents: [CreateItemComponent]
 

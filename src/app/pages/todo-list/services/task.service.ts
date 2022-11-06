@@ -9,6 +9,7 @@ import {Task} from '../models/task-model';
 import {map} from 'rxjs/operators';
 import {AuthService} from '../../auth/services/auth.service';
 import {User} from '../../auth/models/user';
+import {ToastrService} from 'ngx-toastr';
 
 
 @Injectable({
@@ -19,11 +20,13 @@ export class TaskService {
   userId = this.authService.getUid();
   searchItem: BehaviorSubject<string> = new BehaviorSubject<string>('');
   taskItem$: Subject<Task> = new Subject<Task>();
+  taskFiltered$: Subject<Task[]> = new Subject<Task[]>();
 
 
   constructor(public afs: AngularFirestore,
               public afAuth: AngularFireAuth,
-              private authService: AuthService) {
+              private authService: AuthService,
+              private toastr: ToastrService) {
 
   }
 
@@ -76,7 +79,8 @@ export class TaskService {
       this.getTasks().subscribe(tasks => {
         tasks = tasks.filter(task => task.id !== taskId);
         const userRef = this.afs.doc(`users/${this.userId}`);
-        userRef.set({tasks}, {mergeFields: ['tasks']}).then(() => resolve()).catch(() => reject());
+        userRef.set({tasks}, {mergeFields: ['tasks']}).then(() => resolve(
+        )).catch(() => reject());
       });
     });
   }
@@ -96,5 +100,9 @@ export class TaskService {
 
   setTask(task) {
     this.taskItem$.next(task);
+  }
+
+  setTaskFiltered(tasks: Task[]) {
+    this.taskFiltered$.next(tasks);
   }
 }

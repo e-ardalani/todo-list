@@ -9,9 +9,15 @@
       <!--      <button (click)="onRemove()">x</button>-->
 
     </div>
-    <div class="bookmark" (click)="onBookMark()">
-      <img
-        [src]="task.isBookmark?'./assets/images/bookmark.svg':'./assets/images/blue-star.png'">
+    <div class="action">
+      <div class="bookmark" (click)="onBookMark()">
+        <img
+          [src]="!task.isBookmark?'./assets/images/bookmark.svg':'./assets/images/blue-star.png'">
+      </div>
+      <div class="btn-action">
+        <button><img src="./assets/images/edit.svg"></button>
+        <button (click)="onRemove()"><img src="./assets/images/trash.svg"></button>
+      </div>
     </div>
   </mat-card>
 </div>

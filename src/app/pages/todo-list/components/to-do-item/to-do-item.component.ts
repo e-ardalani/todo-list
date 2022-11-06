@@ -13,6 +13,7 @@ export class ToDoItemComponent {
   @Output() done = new EventEmitter();
   @Output() bookMark = new EventEmitter();
   @Output() remove = new EventEmitter();
+  @Output() edit = new EventEmitter();
 
 
   constructor(private taskService: TaskService) {
@@ -28,6 +29,10 @@ export class ToDoItemComponent {
 
   onBookMark() {
     this.bookMark.emit();
+  }
+
+  onEdit() {
+    this.edit.emit();
   }
 
   getTask(task: Task) {
