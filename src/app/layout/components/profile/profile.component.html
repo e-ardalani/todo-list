@@ -1,4 +1,4 @@
-<div class="bg-gray-100 shadow-lg flex items-center rounded-full" [matMenuTriggerFor]="menu" *ngIf="user$">
+<div class="bg-gray-100 m-2 shadow-lg flex items-center rounded-full" [matMenuTriggerFor]="menu" *ngIf="user$">
   <img [src]="(user$ |async)?.photoURL ? (user$ |async)?.photoURL :'./assets/images/user.png'"
        class="h-6 sm:h-9 shadow-lg flex items-center rounded-full" alt="photo" i18n-alt/>
 </div>

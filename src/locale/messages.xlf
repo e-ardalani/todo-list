@@ -50,19 +50,25 @@
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="cdb0bee7d8d8e224deb70ff09f19c496902d1967" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="&lt;/span&gt;"/></source>
+      <trans-unit id="808aae9a2747907ce64963d6749719b3c4b6dbfd" datatype="html">
+        <source>Switch To Light Mode</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/components/user-info-dialog/user-info-dialog.component.html</context>
-          <context context-type="linenumber">17,18</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="59aeda2f9c0fe01f0401af5ca42ce3a17b8a5bd8" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="&lt;/span&gt;
-    &lt;/div&gt;"/></source>
+      <trans-unit id="635146694489727e7a8ff07bbe5c7b3dd1ee4f2e" datatype="html">
+        <source>Switch To Dark Mode</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/components/user-info-dialog/user-info-dialog.component.html</context>
-          <context context-type="linenumber">22,23</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b6c7be1cfe7c9b8b946383c40c5b7f0e3d0c73d4" datatype="html">
+        <source>Switch Language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/components/user-info-dialog/user-info-dialog.component.html</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="34557152cff7bc7db72a2a8706794d7fba4bac86" datatype="html">
@@ -192,60 +198,142 @@
           <context context-type="linenumber">43,47</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="52dbd75d1a9450dce3efa477b38cf3534f7f2004" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{isEdit ? &apos;Edit Task&apos; :&apos;Create Task&apos;}}"/></source>
+      <trans-unit id="fe1e725459676dce9500fc77fe6121c34b5def53" datatype="html">
+        <source>Thank You for Registering </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/verify-email/verify-email.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f5c3eb148f881e86f9af67df42f2edab73766b1d" datatype="html">
+        <source> We have sent a confirmation email to <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ user.email }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/verify-email/verify-email.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c0a457a19b618d6ed046294355f14555ef71fd77" datatype="html">
+        <source> Please check your email and click on the link to verfiy your email address. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/verify-email/verify-email.component.html</context>
+          <context context-type="linenumber">16,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="09334d60fdc511802262b581852670cd1a3b3dba" datatype="html">
+        <source> Resend Verification Email </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/verify-email/verify-email.component.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6f4ca0210e30e62c2cf817d02cb0db76f1263c15" datatype="html">
+        <source>Go back to?<x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;text-gray-700 font-normal&quot; routerLink=&quot;auth/sign-in&quot;&gt;"/> Sign in<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+          &gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/components/verify-email/verify-email.component.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f4f4485aaa24959d8e30cbe54db8594208d1a4f9" datatype="html">
+        <source>Create Task</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/todo-list/components/create-item-bottom-sheet/create-item-bottom-sheet.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="569956a884fdc683398007334959f81e775cdbaa" datatype="html">
-        <source> <x id="INTERPOLATION" equiv-text="{{isEdit ? &apos;Edit&apos; :&apos;Add&apos;}}"/> </source>
+      <trans-unit id="f32a758af13ac488ca066a9fba4eca2f9856fc8b" datatype="html">
+        <source>Edit Task</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/todo-list/components/create-item-bottom-sheet/create-item-bottom-sheet.component.html</context>
-          <context context-type="linenumber">26,28</context>
+          <context context-type="linenumber">6</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="6cdd97246daddeb2c41c4b09294534e29518f61f" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{isEdit ? &apos;Edit Task&apos; : &apos;Add Task&apos;}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/todo-list/components/create-item/create-item.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="0d5bf4ee511695968bc87a66b3acc22c806cb92e" datatype="html">
-        <source> <x id="INTERPOLATION" equiv-text="{{isEdit ? &apos;Edit&apos; : &apos;Add&apos;}}"/> </source>
+      <trans-unit id="40d113e19c15757db7fd94c341a2655622c0fbd2" datatype="html">
+        <source> Add </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/todo-list/components/create-item/create-item.component.html</context>
-          <context context-type="linenumber">28,30</context>
+          <context context-type="sourcefile">src/app/pages/todo-list/components/create-item-bottom-sheet/create-item-bottom-sheet.component.html</context>
+          <context context-type="linenumber">27,29</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8afc5f9a59b8d5dc2f54ab3f1f0498d073719968" datatype="html">
-        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span matChipAvatar class=&quot;task-count&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{totalCount}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> All</source>
+      <trans-unit id="0a6ec8267dad40dbcb3333b58613118f05f0742a" datatype="html">
+        <source> Edit </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/create-item-bottom-sheet/create-item-bottom-sheet.component.html</context>
+          <context context-type="linenumber">34,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="17a9d3860d9ad593dd09a9f934e03999d9e76a7a" datatype="html">
+        <source> Cancel </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/create-item-bottom-sheet/create-item-bottom-sheet.component.html</context>
+          <context context-type="linenumber">41,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4aaf3aba083efdb4e1e66fcc67a35695c151d81f" datatype="html">
+        <source>Add Task</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/create-item/create-item.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c135f4618bd4d3741aa311d61a3c455739f8aa16" datatype="html">
+        <source> Edit </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/create-item/create-item.component.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4ce6e4af12827a94e05b9ff0b0fc8818b0e2a2e2" datatype="html">
+        <source> Add </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/create-item/create-item.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="da44efc7b658c318651866454d258bbbe57ff21c" datatype="html">
+        <source> Cancel </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/create-item/create-item.component.html</context>
+          <context context-type="linenumber">44,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dfc3c34e182ea73c5d784ff7c8135f087992dac1" datatype="html">
+        <source>All</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/todo-list/components/filter-box/filter-box.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6ac70b588d26ccee45942189a41bcc04c25d2450" datatype="html">
-        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span matChipAvatar class=&quot;task-count&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{bookmarkCount}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Star</source>
+      <trans-unit id="7c499e603ee536e7a80f5be10833dbdcfbcf90be" datatype="html">
+        <source> Star </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/todo-list/components/filter-box/filter-box.component.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="b2ec2dccd1729eebd6d817b5dafcd58b5f757fce" datatype="html">
-        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span matChipAvatar class=&quot;task-count&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{doneCount}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>Completed</source>
+      <trans-unit id="a7c328c4773db932ff14a1954e15e43dca58e7b7" datatype="html">
+        <source>Completed</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/todo-list/components/filter-box/filter-box.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="04b69eca5d32d6d68ca1e1589c1c1fa131641f8e" datatype="html">
-        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span matChipAvatar class=&quot;task-count&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{ongoingCount}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> Ongoing</source>
+      <trans-unit id="e1389dfd82e3cf5107c986d3ab56070cda5ad4ab" datatype="html">
+        <source> Ongoing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/todo-list/components/filter-box/filter-box.component.html</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f1fb641f599b5ff4f33419ca08dcb02c00822ea5" datatype="html">
+        <source>Add a task</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/todo-list/components/to-do-list/to-do-list.component.html</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="829ee6ae59965f00eb75aa275b361130c5259daa" datatype="html">
@@ -267,6 +355,17 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/confirm-bottom-sheet/confirm-bottom-sheet.component.html</context>
           <context context-type="linenumber">18,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2a4672ce4de0db6307915fa5d5f8aef5cfe49b58" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{label}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/custom-input/custom-input.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/custom-text-area/custom-text-area.component.html</context>
+          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2c14e4d3e75ac6bb44ece5de57338585803e2c5c" datatype="html">

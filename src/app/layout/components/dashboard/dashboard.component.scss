@@ -1,4 +1,4 @@
-@import "partial/breakpoints";
+@import "../../../../assets/themes/partial/breakpoints";
 
 .dashboard-container {
   display: flex;
@@ -14,7 +14,8 @@
     @include media-breakpoint('lt-md') {
       padding: 10px;
       align-items: center;
-      flex-direction: column;    }
+      flex-direction: column;
+    }
 
   }
 }
