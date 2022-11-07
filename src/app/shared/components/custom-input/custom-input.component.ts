@@ -1,10 +1,7 @@
 import {
   Component,
-  OnInit,
-  OnDestroy,
   Input,
   Renderer2,
-  ElementRef,
   AfterViewInit,
   AfterViewChecked,
   RendererStyleFlags2,
@@ -24,7 +21,7 @@ import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, Validators} from '
     }
   ]
 })
-export class CustomInputComponent implements OnInit, OnDestroy, AfterViewInit, AfterViewChecked, ControlValueAccessor {
+export class CustomInputComponent implements AfterViewInit, AfterViewChecked, ControlValueAccessor {
   @Input() formControl: FormControl = new FormControl();
   @Input() fontSizePx = '12';
   @Input() name = '';
@@ -117,14 +114,6 @@ export class CustomInputComponent implements OnInit, OnDestroy, AfterViewInit, A
     }
   }
 
-  ngOnInit(): void {
-
-  }
-
-
-  ngOnDestroy(): void {
-
-  }
 
 }
 

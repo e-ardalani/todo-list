@@ -5,7 +5,7 @@ import {Component, EventEmitter, Inject, LOCALE_ID, OnInit, Output} from '@angul
   templateUrl: './toggle-language.component.html',
   styleUrls: ['./toggle-language.component.scss']
 })
-export class ToggleLanguageComponent implements OnInit {
+export class ToggleLanguageComponent {
   lang = 'En';
   @Output() selectLang = new EventEmitter();
 
@@ -18,26 +18,9 @@ export class ToggleLanguageComponent implements OnInit {
   ) {
   }
 
-  ngOnInit(): void {
-    this.lang = localStorage.getItem('lang') === 'en' ? 'en' : 'fa';
-    this.activeLocale = this.lang;
-  }
-
 
   onChange() {
-    const lang = JSON.stringify(this.lang);
-    localStorage.setItem('lang', lang);
-    this.lang = (this.lang === 'en') ? 'fa' : 'en';
-    this.selectLang.emit(this.lang);
-    this.activeLocale = this.lang;
     window.location.href = `/todo-list/${this.activeLocale}`;
   }
-
-  // toggleLang() {
-  //   const lang = JSON.stringify(this.lang);
-  //   localStorage.setItem('lang', lang);
-  //   this.lang = (this.lang === 'En') ? 'Fa' : 'En';
-  //   this.selectLang.emit(this.lang);
-  // }
 
 }

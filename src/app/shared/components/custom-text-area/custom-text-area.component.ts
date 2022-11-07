@@ -1,13 +1,9 @@
 import {
   Component,
-  OnInit,
-  OnDestroy,
   Input,
   Renderer2,
-  ElementRef,
   AfterViewInit,
   AfterViewChecked,
-  RendererStyleFlags2,
   forwardRef
 } from '@angular/core';
 import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, Validators} from '@angular/forms';
@@ -24,7 +20,7 @@ import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, Validators} from '
     }
   ]
 })
-export class CustomTextAreaComponent implements OnInit, OnDestroy, AfterViewInit, AfterViewChecked, ControlValueAccessor {
+export class CustomTextAreaComponent implements AfterViewInit, AfterViewChecked, ControlValueAccessor {
   @Input() formControl: FormControl = new FormControl();
   @Input() fontSizePx = '14';
   @Input() name = '';
@@ -113,13 +109,5 @@ export class CustomTextAreaComponent implements OnInit, OnDestroy, AfterViewInit
     }
   }
 
-  ngOnInit(): void {
-
-  }
-
-
-  ngOnDestroy(): void {
-
-  }
 
 }

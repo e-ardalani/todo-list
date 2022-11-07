@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {MatBottomSheetRef} from '@angular/material/bottom-sheet';
 
 @Component({
@@ -6,13 +6,10 @@ import {MatBottomSheetRef} from '@angular/material/bottom-sheet';
   templateUrl: './confirm-bottom-sheet.component.html',
   styleUrls: ['./confirm-bottom-sheet.component.scss']
 })
-export class ConfirmBottomSheetComponent implements OnInit {
+export class ConfirmBottomSheetComponent {
 
-  constructor(private bottomSheetRef: MatBottomSheetRef<ConfirmBottomSheetComponent>) { }
-
-  ngOnInit(): void {
+  constructor(private bottomSheetRef: MatBottomSheetRef<ConfirmBottomSheetComponent>) {
   }
-
 
   submit() {
     this.bottomSheetRef.dismiss(true);
