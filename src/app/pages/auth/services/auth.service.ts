@@ -58,6 +58,8 @@ export class AuthService {
           this.apiService.complete();
           if (user) {
             this.router.navigate(['dashboard']);
+            localStorage.setItem('dark-mode', 'false');
+
           }
         });
       })
@@ -77,7 +79,7 @@ export class AuthService {
         up and returns promise */
         this.SendVerificationMail();
         this.SetUserData(result.user, firstName, lastName);
-        this.router.navigate(['auth/sign-in']);
+        this.router.navigate(['auth/verify-email-address']);
 
       })
       .catch((error) => {
@@ -90,7 +92,7 @@ export class AuthService {
     return this.afAuth.currentUser
       .then((u: any) => u.sendEmailVerification())
       .then(() => {
-        this.router.navigate(['verify-email-address']);
+        this.router.navigate(['auth/verify-email-address']);
       });
   }
 
@@ -120,6 +122,7 @@ export class AuthService {
       this.afAuth.authState.subscribe((user) => {
         if (user) {
           this.router.navigate(['dashboard']);
+          localStorage.setItem('dark-mode', 'false');
         }
       });
     }).catch((error) => {
@@ -177,8 +180,7 @@ export class AuthService {
   // Sign out
   SignOut() {
     return this.afAuth.signOut().then(() => {
-      localStorage.removeItem('uid');
-      localStorage.removeItem('emailVerified');
+      localStorage.clear();
       this.router.navigate(['auth/sign-in']);
     });
   }

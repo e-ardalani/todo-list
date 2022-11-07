@@ -14,12 +14,14 @@
     <hr>
     <div class="dark-mode-container">
       <app-toggle-theme (darkMode)="getTheme($event)"></app-toggle-theme>
-      <span i18n>{{isDarkMode ? 'Switch To Light Mode' : 'Switch To Dark Mode'}}</span>
+      <span i18n *ngIf="isDarkMode">Switch To Light Mode</span>
+      <span i18n *ngIf="!isDarkMode">Switch To Dark Mode</span>
     </div>
     <hr>
     <div class="lang-container">
       <app-toggle-language (selectLang)="getLang($event)"></app-toggle-language>
-      <span i18n>{{(lang === 'Fa') ? 'Switch To En' : 'Switch To Fa'}}</span>
+      <span i18n *ngIf="lang">Switch To Fa</span>
+      <span i18n *ngIf="!lang">Switch To En</span>
     </div>
 
   </div>

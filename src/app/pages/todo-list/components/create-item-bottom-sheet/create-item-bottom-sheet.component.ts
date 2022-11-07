@@ -58,7 +58,6 @@ export class CreateItemBottomSheetComponent implements OnInit {
         creationDate: Date.now(),
         id: uuidv4()
       };
-      console.log(task);
       this.taskService.addTask(task).then(() => {
         this.bottomSheetRef.dismiss();
       }).finally(() => {

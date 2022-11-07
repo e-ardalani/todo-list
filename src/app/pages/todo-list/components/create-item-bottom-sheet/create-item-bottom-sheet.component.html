@@ -2,32 +2,40 @@
   <div class="bottom-sheet-top-line"><span></span></div>
 
   <div class="dialog-content">
-    <span class="bottom-sheet-title" i18n>{{isEdit ? 'Edit Task' :'Create Task'}}</span>
+    <span class="bottom-sheet-title" i18n *ngIf="!isEdit">Create Task</span>
+    <span class="bottom-sheet-title" i18n *ngIf="isEdit">Edit Task</span>
     <div class="bottom-sheet-content">
       <form [formGroup]="formGroup"  class="form">
 
-        <app-custom-input
+        <app-custom-input i18n
           [name]="'title'"
           [label]="'title'"
           class="margin-input-title" formControlName="title"
           [formControl]="formGroup.controls['title']">
         </app-custom-input>
 
-        <app-custom-text-area formControlName="description"
+        <app-custom-text-area formControlName="description" i18n
                               [formControl]="formGroup.controls['description']"
                               [name]="'description'"
                               [label]="'description'"
                               class="margin-input"></app-custom-text-area>
 
         <div class="action">
-          <button (click)="onSubmit(formGroup.value)" i18n
+          <button (click)="onSubmit(formGroup.value)" i18n *ngIf="!isEdit"
             type="button"
             class="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
             [disabled]="!formGroup.valid">
-            {{isEdit ? 'Edit' :'Add'}}
+            Add
           </button>
 
-          <button
+          <button (click)="onSubmit(formGroup.value)" i18n *ngIf="isEdit"
+                  type="button"
+                  class="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+                  [disabled]="!formGroup.valid">
+             Edit
+          </button>
+
+          <button i18n
             type="button"
             class="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
          (click)="cancel()" >

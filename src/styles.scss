@@ -49,11 +49,11 @@ body.dark-theme {
 
 }
 
-body, section, mat-menu {
+body, section {
   background: var(--bkg-color) !important;
 }
 
-h1, p, span, label {
+h1, p, span {
   color: var(--text-color) !important;
 }
 

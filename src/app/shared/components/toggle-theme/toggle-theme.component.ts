@@ -6,7 +6,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./toggle-theme.component.scss']
 })
 export class ToggleThemeComponent implements OnInit {
-  isDarkTheme = false;
+  isDarkTheme: boolean;
   @Output() darkMode = new EventEmitter();
   theme;
 
@@ -15,24 +15,27 @@ export class ToggleThemeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.theme = localStorage.getItem('dark-mode');
+    this.theme = JSON.parse(localStorage.getItem('dark-mode'));
     if (this.theme) {
-      this.isDarkTheme = localStorage.getItem('dark-mode') === 'Dark' ? true : false;
+      this.isDarkTheme = this.theme;
     }
-    if (this.isDarkTheme) {
-      document.body.classList.toggle('dark-theme');
+    this.isDarkTheme ? document.body.classList.toggle('dark-theme') : document.body.classList.toggle('light-theme');
 
-    }
 
   }
 
 
   toggleTheme() {
-    // const darkMode = JSON.stringify(this.isDarkTheme);
-    // console.log(darkMode);
-    // localStorage.setItem('dark-mode', (!this.theme) ? 'true': this.isDarkTheme);
     this.isDarkTheme = !this.isDarkTheme;
-    document.body.classList.toggle('dark-theme');
+    console.log(this.isDarkTheme);
+    if (this.isDarkTheme) {
+      document.body.classList.remove('light-theme');
+      document.body.classList.add('dark-theme');
+    } else {
+      document.body.classList.remove('dark-theme');
+      document.body.classList.add('light-theme');
+    }
+    localStorage.setItem('dark-mode', JSON.stringify(this.isDarkTheme));
     this.darkMode.emit(this.isDarkTheme);
 
   }

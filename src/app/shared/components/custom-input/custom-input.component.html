@@ -1,7 +1,7 @@
 <div [class]="name">
   <div [ngStyle]="{'font-size': fontSizePx+'px'}">
     <mat-form-field style="width: 100%" [appearance]="appearance">
-      <mat-label *ngIf="withLabel" [ngStyle]="{'color': labelColor, 'fontsize' : '12px'}">{{label}}</mat-label>
+      <mat-label *ngIf="withLabel" i18n [ngStyle]="{'color': labelColor, 'fontsize' : '12px'}">{{label}}</mat-label>
       <input matInput type="text" [placeholder]="placeholder" [value]="matInputValue" [formControl]="formControl" [required]="required"
              (change)="onMatInputChange($event.target.value)" (click)="onInputClicked($event)" [disabled]="isDisabled">
       <mat-error *ngIf="formControl?.errors">{{getErrorMessages(formControl?.errors)}}</mat-error>

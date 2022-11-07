@@ -1,19 +1,21 @@
 <div class="dialog-header">
-  <img src="./assets/images/close.svg" alt="close" i18n-alt  (click)="cancel()">
-  <span i18n class="dialog-title">{{isEdit ? 'Edit Task' : 'Add Task'}}</span>
+  <img src="./assets/images/close.svg" alt="close" i18n-alt (click)="cancel()">
+  <span i18n class="dialog-title" *ngIf="isEdit">Edit Task</span>
+  <span i18n class="dialog-title" *ngIf="!isEdit">Add Task</span>
   <span> </span>
 </div>
 <mat-dialog-content class="dialog-content">
   <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
 
     <app-custom-input
+      i18n
       [name]="'title'"
       [label]="'title'"
       class="margin-input-title" formControlName="title"
       [formControl]="formGroup.controls['title']">
     </app-custom-input>
 
-    <app-custom-text-area formControlName="description"
+    <app-custom-text-area formControlName="description" i18n
                           [formControl]="formGroup.controls['description']"
                           [name]="'description'"
                           [label]="'description'"
@@ -22,17 +24,24 @@
   </form>
 
   <div class="action">
-    <button (click)="onSubmit(formGroup.value)" i18n
+    <button (click)="onSubmit(formGroup.value)" i18n *ngIf="isEdit"
             type="button"
             class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline"
             [disabled]="!formGroup.valid">
-      {{isEdit ? 'Edit' : 'Add'}}
+      Edit
     </button>
 
-    <button
+    <button *ngIf="!isEdit" (click)="onSubmit(formGroup.value)" i18n
+            type="button"
+            class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline"
+            [disabled]="!formGroup.valid">
+      Add
+    </button>
+
+    <button i18n
       type="button"
       class="border border-gray-200 bg-gray-200 text-gray-700 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
-   (click)="cancel()" >
+      (click)="cancel()">
       Cancel
     </button>
   </div>

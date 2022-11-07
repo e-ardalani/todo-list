@@ -1,17 +1,20 @@
 <div class="filter-container">
   <mat-chip-list aria-label="task filter selection">
     <mat-chip (click)="getAllTask()">
-      <ng-container i18n><span matChipAvatar class="task-count">{{totalCount}}</span> All</ng-container>
+      <ng-container><span matChipAvatar class="task-count">{{totalCount}}</span><label i18n>All</label></ng-container>
     </mat-chip>
     <mat-chip color="primary" (click)="getBookmarkTask()">
-      <ng-container i18n><span matChipAvatar class="task-count">{{bookmarkCount}}</span> Star</ng-container>
+      <ng-container><span matChipAvatar class="task-count">{{bookmarkCount}}</span><label i18n> Star </label>
+      </ng-container>
     </mat-chip>
     <mat-chip color="accent" (click)="getCompletedTask()">
-      <ng-container i18n><span matChipAvatar class="task-count">{{doneCount}}</span>Completed</ng-container>
+      <ng-container><span matChipAvatar class="task-count">{{doneCount}}</span><label i18n>Completed</label>
+      </ng-container>
     </mat-chip>
 
     <mat-chip color="accent" (click)="getUnCompletedTask()">
-      <ng-container i18n><span matChipAvatar class="task-count">{{ongoingCount}}</span> Ongoing</ng-container>
+      <ng-container><span matChipAvatar class="task-count">{{ongoingCount}}</span><label i18n> Ongoing</label>
+      </ng-container>
     </mat-chip>
   </mat-chip-list>
 </div>

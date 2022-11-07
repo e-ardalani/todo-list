@@ -1,13 +1,7 @@
-<!--<button (click)="toggleLang()" i18n>-->
-<!--  {{lang}}</button>-->
-<select
-  (change)="onChange()"
-  [(ngModel)]="activeLocale"
->
-  <option
-    *ngFor="let locale of locales"
-    [value]="locale.code"
-  >
+<select (change)="onChange()" [(ngModel)]="activeLocale">
+  <option *ngFor="let locale of locales" [value]="locale.code">
     {{ locale.name }}
   </option>
 </select>
+
+
